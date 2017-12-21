@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_big_app.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xhdpi\\ic_big_app.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_back_btn_normal.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xhdpi\\back_btn_normal.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\menu_main.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_btn_set_pre.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xxhdpi\\btn_set_pre.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable_item_bg.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable\\item_bg.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\layout_activity_main.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\layout_title_bar.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\layout\\title_bar.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_more.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xhdpi\\ic_more.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable_btn_start_selector.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable\\btn_start_selector.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\raw_hongbao_arrived.wav.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\raw\\hongbao_arrived.wav"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\xml_accessible_service_config.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\xml\\accessible_service_config.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\layout_activity_empty.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\layout\\activity_empty.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_btn_set_nor.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xxhdpi\\btn_set_nor.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable_title_bar_back_bg_selector.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable\\title_bar_back_bg_selector.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable_editable_bg_selector.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable\\editable_bg_selector.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable_time_bg.xml.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable\\time_bg.xml"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_text_tab_bg_selected.9.png.flat",
+        "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\drawable-xhdpi\\text_tab_bg_selected.9.png"
+    }
+]

@@ -1,0 +1,15 @@
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_empty.xml:0
+-keep class android.support.constraint.ConstraintLayout { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\release\AndroidManifest.xml:39
+-keep class com.wei.grabmoney.service.GrabMoneyService { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\release\AndroidManifest.xml:37
+-keep class com.wei.grabmoney.ui.EmptyActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\release\AndroidManifest.xml:25
+-keep class com.wei.grabmoney.ui.MainActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_main.xml:0
+-keepclassmembers class * { *** startService(...); }
+

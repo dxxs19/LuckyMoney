@@ -1,0 +1,70 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\values\\color.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,102,142,188,238,284,335,377",
+                        "endColumns": "46,39,45,49,45,50,41,42",
+                        "endOffsets": "97,137,183,233,279,330,372,415"
+                    }
+                },
+                {
+                    "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "23,26,29,33,39",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "1050,1133,1251,1420,1742",
+                        "endLines": "25,28,32,38,42",
+                        "endColumns": "12,12,12,12,12",
+                        "endOffsets": "1128,1246,1415,1737,1948"
+                    }
+                },
+                {
+                    "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "20,21,22",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "901,954,997",
+                        "endColumns": "52,42,52",
+                        "endOffsets": "949,992,1045"
+                    }
+                },
+                {
+                    "source": "D:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "420,466,515,562,610,659,705,763,819,857",
+                        "endColumns": "45,48,46,47,48,45,57,55,37,43",
+                        "endOffsets": "461,510,557,605,654,700,758,814,852,896"
+                    }
+                }
+            ]
+        }
+    ]
+}

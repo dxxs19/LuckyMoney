@@ -1,0 +1,4349 @@
+_____________________________________________________________________
+- Program class: android/support/annotation/Keep
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x2601
+    = @ public @interface android.support.annotation.Keep extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [java/lang/annotation/Annotation]
+
+Constant Pool (count = 20):
+  - Class [android/support/annotation/Keep]
+  - Class [java/lang/Object]
+  - Class [java/lang/annotation/Annotation]
+  - Utf8 [ANNOTATION_TYPE]
+  - Utf8 [CLASS]
+  - Utf8 [CONSTRUCTOR]
+  - Utf8 [FIELD]
+  - Utf8 [Ljava/lang/annotation/ElementType;]
+  - Utf8 [Ljava/lang/annotation/Retention;]
+  - Utf8 [Ljava/lang/annotation/RetentionPolicy;]
+  - Utf8 [Ljava/lang/annotation/Target;]
+  - Utf8 [METHOD]
+  - Utf8 [PACKAGE]
+  - Utf8 [RuntimeVisibleAnnotations]
+  - Utf8 [TYPE]
+  - Utf8 [android/support/annotation/Keep]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/annotation/Annotation]
+  - Utf8 [value]
+
+Fields (count = 0):
+
+Methods (count = 0):
+
+Class file attributes (count = 1):
+  - Runtime visible annotations attribute:
+    - Annotation [Ljava/lang/annotation/Retention;]:
+      - Enum constant element value [value, Ljava/lang/annotation/RetentionPolicy;, CLASS]
+    - Annotation [Ljava/lang/annotation/Target;]:
+      - Array element value [value]:
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, PACKAGE]
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, TYPE]
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, ANNOTATION_TYPE]
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, CONSTRUCTOR]
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, METHOD]
+        + Enum constant element value [(default), Ljava/lang/annotation/ElementType;, FIELD]
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/service/GrabMoneyService
+  Superclass:    android/accessibilityservice/AccessibilityService
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x21
+    = public class com.wei.grabmoney.service.GrabMoneyService extends android.accessibilityservice.AccessibilityService
+
+Interfaces (count = 0):
+
+Constant Pool (count = 484):
+  - Integer [268435456]
+  - Integer [268435466]
+  - Integer [2131165184]
+  - String []
+  - String [--- clickWallet ---]
+  - String [--- 开始点红包 ---]
+  - String [GrabMoneyService]
+  - String [[QQ红包]]
+  - String [[微信红包]]
+  - String [alarm]
+  - String [android.widget.LinearLayout]
+  - String [bright]
+  - String [com.tencent.mm.plugin.luckymoney.ui.En_fba4b94f]
+  - String [com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyDetailUI]
+  - String [com.tencent.mm.ui.LauncherUI]
+  - String [com.tencent.mm:id/bx4]
+  - String [com.tencent.mobileqq]
+  - String [com.tencent.mobileqq.activity.SplashActivity]
+  - String [com.tencent.mobileqq:id/fun_btn]
+  - String [content : ]
+  - String [cooperation.qwallet.plugin.QWalletPluginProxyActivity]
+  - String [delay_time]
+  - String [eventType = ]
+  - String [keyguard]
+  - String [luckMoneyInfo.isNodeCanOpen]
+  - String [mark]
+  - String [mark_work]
+  - String [nothing]
+  - String [power]
+  - String [tempClass : ]
+  - String [unLock]
+  - String [vibrate]
+  - String [vibrator]
+  - String [voice]
+  - String [voice_vibrate]
+  - String [亮屏]
+  - String [口令红包]
+  - String [屏幕处于锁屏状态！]
+  - String [异常：]
+  - String [手慢了]
+  - String [抢红包服务已被中断！！！]
+  - String [服务已开启！！！]
+  - String [查看红包]
+  - String [点击拆开]
+  - String [点击输入口令]
+  - String [该红包已超过]
+  - String [释放锁]
+  - String [领取红包]
+  - String [，]
+  - Class [[Ljava/lang/String;]
+  - Class [android/accessibilityservice/AccessibilityService]
+  - Class [android/app/KeyguardManager]
+  - Class [android/app/KeyguardManager$KeyguardLock]
+  - Class [android/app/Notification]
+  - Class [android/app/Notification$Builder]
+  - Class [android/app/PendingIntent]
+  - Class [android/app/PendingIntent$CanceledException]
+  - Class [android/content/Intent]
+  - Class [android/content/SharedPreferences]
+  - Class [android/media/SoundPool]
+  - Class [android/os/Handler]
+  - Class [android/os/PowerManager]
+  - Class [android/os/PowerManager$WakeLock]
+  - Class [android/os/Vibrator]
+  - Class [android/view/accessibility/AccessibilityEvent]
+  - Class [android/view/accessibility/AccessibilityNodeInfo]
+  - Class [android/widget/Toast]
+  - Class [com/wei/grabmoney/a/a]
+  - Class [com/wei/grabmoney/a/b]
+  - Class [com/wei/grabmoney/service/GrabMoneyService]
+  - Class [com/wei/grabmoney/ui/EmptyActivity]
+  - Class [java/lang/CharSequence]
+  - Class [java/lang/Exception]
+  - Class [java/lang/Integer]
+  - Class [java/lang/InterruptedException]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [java/lang/Thread]
+  - Class [java/util/Arrays]
+  - Class [java/util/HashMap]
+  - Class [java/util/Iterator]
+  - Class [java/util/List]
+  - Long [6000]
+  - Fieldref [android/app/Notification.contentIntent Landroid/app/PendingIntent;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.a Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.c Landroid/app/KeyguardManager;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.d Landroid/app/KeyguardManager$KeyguardLock;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.e Landroid/os/PowerManager;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.f Landroid/os/PowerManager$WakeLock;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.g Landroid/os/Vibrator;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.h Lcom/wei/grabmoney/a/b;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.i [Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.j Ljava/util/List;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.k Landroid/os/Handler;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.l Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.m Landroid/media/SoundPool;]
+  - Fieldref [com/wei/grabmoney/service/GrabMoneyService.n Ljava/util/HashMap;]
+  - Methodref [android/accessibilityservice/AccessibilityService.<init> ()V]
+  - Methodref [android/accessibilityservice/AccessibilityService.onServiceConnected ()V]
+  - Methodref [android/app/KeyguardManager.inKeyguardRestrictedInputMode ()Z]
+  - Methodref [android/app/KeyguardManager.newKeyguardLock (Ljava/lang/String;)Landroid/app/KeyguardManager$KeyguardLock;]
+  - Methodref [android/app/KeyguardManager$KeyguardLock.disableKeyguard ()V]
+  - Methodref [android/app/PendingIntent.send ()V]
+  - Methodref [android/app/PendingIntent$CanceledException.getMessage ()Ljava/lang/String;]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/content/Intent.addFlags (I)Landroid/content/Intent;]
+  - Methodref [android/media/SoundPool.<init> (III)V]
+  - Methodref [android/media/SoundPool.load (Landroid/content/Context;II)I]
+  - Methodref [android/media/SoundPool.play (IFFIIF)I]
+  - Methodref [android/os/Handler.<init> ()V]
+  - Methodref [android/os/PowerManager.isScreenOn ()Z]
+  - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+  - Methodref [android/os/PowerManager$WakeLock.acquire ()V]
+  - Methodref [android/os/PowerManager$WakeLock.release ()V]
+  - Methodref [android/os/Vibrator.vibrate (J)V]
+  - Methodref [android/view/accessibility/AccessibilityEvent.getClassName ()Ljava/lang/CharSequence;]
+  - Methodref [android/view/accessibility/AccessibilityEvent.getEventType ()I]
+  - Methodref [android/view/accessibility/AccessibilityEvent.getParcelableData ()Landroid/os/Parcelable;]
+  - Methodref [android/view/accessibility/AccessibilityEvent.getText ()Ljava/util/List;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByViewId (Ljava/lang/String;)Ljava/util/List;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.getChild (I)Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.getClassName ()Ljava/lang/CharSequence;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.getParent ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.getText ()Ljava/lang/CharSequence;]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.isClickable ()Z]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.isEnabled ()Z]
+  - Methodref [android/view/accessibility/AccessibilityNodeInfo.performAction (I)Z]
+  - Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  - Methodref [android/widget/Toast.show ()V]
+  - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/a/b.<init> (Landroid/content/Context;)V]
+  - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;F)F]
+  - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.a ()Ljava/util/List;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityEvent;)V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)Z]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Z)V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.b ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.b (Landroid/view/accessibility/AccessibilityNodeInfo;)Z]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.c ()V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.d ()V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.e ()V]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.getApplicationContext ()Landroid/content/Context;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.getRootInActiveWindow ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.performGlobalAction (I)Z]
+  - Methodref [com/wei/grabmoney/service/GrabMoneyService.startActivity (Landroid/content/Intent;)V]
+  - Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
+  - Methodref [java/lang/Integer.intValue ()I]
+  - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+  - Methodref [java/lang/InterruptedException.printStackTrace ()V]
+  - Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/Thread.sleep (J)V]
+  - Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
+  - Methodref [java/util/HashMap.<init> ()V]
+  - Methodref [java/util/HashMap.get (Ljava/lang/Object;)Ljava/lang/Object;]
+  - Methodref [java/util/HashMap.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
+  - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+  - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+  - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/List.contains (Ljava/lang/Object;)Z]
+  - InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/List.isEmpty ()Z]
+  - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+  - InterfaceMethodref [java/util/List.size ()I]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (III)V]
+  - NameAndType [<init> (Landroid/content/Context;)V]
+  - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - NameAndType [a ()Ljava/util/List;]
+  - NameAndType [a (Landroid/view/accessibility/AccessibilityEvent;)V]
+  - NameAndType [a (Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+  - NameAndType [a (Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)Z]
+  - NameAndType [a (Ljava/lang/String;)V]
+  - NameAndType [a (Ljava/lang/String;Ljava/lang/String;)V]
+  - NameAndType [a (Z)V]
+  - NameAndType [a Ljava/lang/String;]
+  - NameAndType [acquire ()V]
+  - NameAndType [addFlags (I)Landroid/content/Intent;]
+  - NameAndType [append (I)Ljava/lang/StringBuilder;]
+  - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - NameAndType [asList ([Ljava/lang/Object;)Ljava/util/List;]
+  - NameAndType [b ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - NameAndType [b (Landroid/view/accessibility/AccessibilityNodeInfo;)Z]
+  - NameAndType [b (Ljava/lang/String;F)F]
+  - NameAndType [b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [b Ljava/lang/String;]
+  - NameAndType [c ()V]
+  - NameAndType [c Landroid/app/KeyguardManager;]
+  - NameAndType [contains (Ljava/lang/CharSequence;)Z]
+  - NameAndType [contains (Ljava/lang/Object;)Z]
+  - NameAndType [contentIntent Landroid/app/PendingIntent;]
+  - NameAndType [d ()V]
+  - NameAndType [d Landroid/app/KeyguardManager$KeyguardLock;]
+  - NameAndType [disableKeyguard ()V]
+  - NameAndType [e ()V]
+  - NameAndType [e Landroid/os/PowerManager;]
+  - NameAndType [equals (Ljava/lang/Object;)Z]
+  - NameAndType [f Landroid/os/PowerManager$WakeLock;]
+  - NameAndType [findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+  - NameAndType [findAccessibilityNodeInfosByViewId (Ljava/lang/String;)Ljava/util/List;]
+  - NameAndType [g Landroid/os/Vibrator;]
+  - NameAndType [get (I)Ljava/lang/Object;]
+  - NameAndType [get (Ljava/lang/Object;)Ljava/lang/Object;]
+  - NameAndType [getApplicationContext ()Landroid/content/Context;]
+  - NameAndType [getChild (I)Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - NameAndType [getClassName ()Ljava/lang/CharSequence;]
+  - NameAndType [getEventType ()I]
+  - NameAndType [getMessage ()Ljava/lang/String;]
+  - NameAndType [getParcelableData ()Landroid/os/Parcelable;]
+  - NameAndType [getParent ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - NameAndType [getRootInActiveWindow ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - NameAndType [getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - NameAndType [getText ()Ljava/lang/CharSequence;]
+  - NameAndType [getText ()Ljava/util/List;]
+  - NameAndType [h Lcom/wei/grabmoney/a/b;]
+  - NameAndType [hasNext ()Z]
+  - NameAndType [i [Ljava/lang/String;]
+  - NameAndType [inKeyguardRestrictedInputMode ()Z]
+  - NameAndType [intValue ()I]
+  - NameAndType [isClickable ()Z]
+  - NameAndType [isEmpty ()Z]
+  - NameAndType [isEnabled ()Z]
+  - NameAndType [isScreenOn ()Z]
+  - NameAndType [iterator ()Ljava/util/Iterator;]
+  - NameAndType [j Ljava/util/List;]
+  - NameAndType [k Landroid/os/Handler;]
+  - NameAndType [l Ljava/lang/String;]
+  - NameAndType [load (Landroid/content/Context;II)I]
+  - NameAndType [m Landroid/media/SoundPool;]
+  - NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  - NameAndType [n Ljava/util/HashMap;]
+  - NameAndType [newKeyguardLock (Ljava/lang/String;)Landroid/app/KeyguardManager$KeyguardLock;]
+  - NameAndType [newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+  - NameAndType [next ()Ljava/lang/Object;]
+  - NameAndType [onServiceConnected ()V]
+  - NameAndType [performAction (I)Z]
+  - NameAndType [performGlobalAction (I)Z]
+  - NameAndType [play (IFFIIF)I]
+  - NameAndType [printStackTrace ()V]
+  - NameAndType [put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
+  - NameAndType [release ()V]
+  - NameAndType [send ()V]
+  - NameAndType [show ()V]
+  - NameAndType [size ()I]
+  - NameAndType [sleep (J)V]
+  - NameAndType [split (Ljava/lang/String;)[Ljava/lang/String;]
+  - NameAndType [startActivity (Landroid/content/Intent;)V]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - NameAndType [valueOf (I)Ljava/lang/Integer;]
+  - NameAndType [vibrate (J)V]
+  - Utf8 []
+  - Utf8 [()I]
+  - Utf8 [()Landroid/content/Context;]
+  - Utf8 [()Landroid/os/Parcelable;]
+  - Utf8 [()Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - Utf8 [()Ljava/lang/CharSequence;]
+  - Utf8 [()Ljava/lang/Object;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()Ljava/util/Iterator;]
+  - Utf8 [()Ljava/util/List;]
+  - Utf8 [()Ljava/util/List<Landroid/view/accessibility/AccessibilityNodeInfo;>;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(I)Landroid/content/Intent;]
+  - Utf8 [(I)Landroid/view/accessibility/AccessibilityNodeInfo;]
+  - Utf8 [(I)Ljava/lang/Integer;]
+  - Utf8 [(I)Ljava/lang/Object;]
+  - Utf8 [(I)Ljava/lang/StringBuilder;]
+  - Utf8 [(I)Z]
+  - Utf8 [(IFFIIF)I]
+  - Utf8 [(III)V]
+  - Utf8 [(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+  - Utf8 [(J)V]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/content/Context;II)I]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  - Utf8 [(Landroid/content/Intent;)V]
+  - Utf8 [(Landroid/view/accessibility/AccessibilityEvent;)V]
+  - Utf8 [(Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+  - Utf8 [(Landroid/view/accessibility/AccessibilityNodeInfo;)Z]
+  - Utf8 [(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)Z]
+  - Utf8 [(Ljava/lang/CharSequence;)Z]
+  - Utf8 [(Ljava/lang/Object;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/Object;)Z]
+  - Utf8 [(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;)Landroid/app/KeyguardManager$KeyguardLock;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Utf8 [(Ljava/lang/String;)Ljava/util/List;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;)[Ljava/lang/String;]
+  - Utf8 [(Ljava/lang/String;F)F]
+  - Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  - Utf8 [(Z)V]
+  - Utf8 [([Ljava/lang/Object;)Ljava/util/List;]
+  - Utf8 [--- clickWallet ---]
+  - Utf8 [--- 开始点红包 ---]
+  - Utf8 [<init>]
+  - Utf8 [Builder]
+  - Utf8 [CanceledException]
+  - Utf8 [Code]
+  - Utf8 [ConstantValue]
+  - Utf8 [GrabMoneyService]
+  - Utf8 [InnerClasses]
+  - Utf8 [KeyguardLock]
+  - Utf8 [Landroid/app/KeyguardManager$KeyguardLock;]
+  - Utf8 [Landroid/app/KeyguardManager;]
+  - Utf8 [Landroid/app/PendingIntent;]
+  - Utf8 [Landroid/media/SoundPool;]
+  - Utf8 [Landroid/os/Handler;]
+  - Utf8 [Landroid/os/PowerManager$WakeLock;]
+  - Utf8 [Landroid/os/PowerManager;]
+  - Utf8 [Landroid/os/Vibrator;]
+  - Utf8 [Lcom/wei/grabmoney/a/b;]
+  - Utf8 [Ljava/lang/String;]
+  - Utf8 [Ljava/util/HashMap;]
+  - Utf8 [Ljava/util/HashMap<Ljava/lang/Integer;Ljava/lang/Integer;>;]
+  - Utf8 [Ljava/util/List;]
+  - Utf8 [Ljava/util/List<Ljava/lang/String;>;]
+  - Utf8 [Signature]
+  - Utf8 [StackMapTable]
+  - Utf8 [WakeLock]
+  - Utf8 [[Ljava/lang/String;]
+  - Utf8 [[QQ红包]]
+  - Utf8 [[微信红包]]
+  - Utf8 [a]
+  - Utf8 [acquire]
+  - Utf8 [addFlags]
+  - Utf8 [alarm]
+  - Utf8 [android.widget.LinearLayout]
+  - Utf8 [android/accessibilityservice/AccessibilityService]
+  - Utf8 [android/app/KeyguardManager]
+  - Utf8 [android/app/KeyguardManager$KeyguardLock]
+  - Utf8 [android/app/Notification]
+  - Utf8 [android/app/Notification$Builder]
+  - Utf8 [android/app/PendingIntent]
+  - Utf8 [android/app/PendingIntent$CanceledException]
+  - Utf8 [android/content/Intent]
+  - Utf8 [android/content/SharedPreferences]
+  - Utf8 [android/media/SoundPool]
+  - Utf8 [android/os/Handler]
+  - Utf8 [android/os/PowerManager]
+  - Utf8 [android/os/PowerManager$WakeLock]
+  - Utf8 [android/os/Vibrator]
+  - Utf8 [android/view/accessibility/AccessibilityEvent]
+  - Utf8 [android/view/accessibility/AccessibilityNodeInfo]
+  - Utf8 [android/widget/Toast]
+  - Utf8 [append]
+  - Utf8 [asList]
+  - Utf8 [b]
+  - Utf8 [bright]
+  - Utf8 [c]
+  - Utf8 [com.tencent.mm.plugin.luckymoney.ui.En_fba4b94f]
+  - Utf8 [com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyDetailUI]
+  - Utf8 [com.tencent.mm.ui.LauncherUI]
+  - Utf8 [com.tencent.mm:id/bx4]
+  - Utf8 [com.tencent.mobileqq]
+  - Utf8 [com.tencent.mobileqq.activity.SplashActivity]
+  - Utf8 [com.tencent.mobileqq:id/fun_btn]
+  - Utf8 [com/wei/grabmoney/a/a]
+  - Utf8 [com/wei/grabmoney/a/b]
+  - Utf8 [com/wei/grabmoney/service/GrabMoneyService]
+  - Utf8 [com/wei/grabmoney/ui/EmptyActivity]
+  - Utf8 [contains]
+  - Utf8 [content : ]
+  - Utf8 [contentIntent]
+  - Utf8 [cooperation.qwallet.plugin.QWalletPluginProxyActivity]
+  - Utf8 [d]
+  - Utf8 [delay_time]
+  - Utf8 [disableKeyguard]
+  - Utf8 [e]
+  - Utf8 [equals]
+  - Utf8 [eventType = ]
+  - Utf8 [f]
+  - Utf8 [findAccessibilityNodeInfosByText]
+  - Utf8 [findAccessibilityNodeInfosByViewId]
+  - Utf8 [g]
+  - Utf8 [get]
+  - Utf8 [getApplicationContext]
+  - Utf8 [getChild]
+  - Utf8 [getClassName]
+  - Utf8 [getEventType]
+  - Utf8 [getMessage]
+  - Utf8 [getParcelableData]
+  - Utf8 [getParent]
+  - Utf8 [getRootInActiveWindow]
+  - Utf8 [getSharedPreferences]
+  - Utf8 [getString]
+  - Utf8 [getSystemService]
+  - Utf8 [getText]
+  - Utf8 [h]
+  - Utf8 [hasNext]
+  - Utf8 [i]
+  - Utf8 [inKeyguardRestrictedInputMode]
+  - Utf8 [intValue]
+  - Utf8 [isClickable]
+  - Utf8 [isEmpty]
+  - Utf8 [isEnabled]
+  - Utf8 [isScreenOn]
+  - Utf8 [iterator]
+  - Utf8 [j]
+  - Utf8 [java/lang/CharSequence]
+  - Utf8 [java/lang/Exception]
+  - Utf8 [java/lang/Integer]
+  - Utf8 [java/lang/InterruptedException]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [java/lang/Thread]
+  - Utf8 [java/util/Arrays]
+  - Utf8 [java/util/HashMap]
+  - Utf8 [java/util/Iterator]
+  - Utf8 [java/util/List]
+  - Utf8 [k]
+  - Utf8 [keyguard]
+  - Utf8 [l]
+  - Utf8 [load]
+  - Utf8 [luckMoneyInfo.isNodeCanOpen]
+  - Utf8 [m]
+  - Utf8 [makeText]
+  - Utf8 [mark]
+  - Utf8 [mark_work]
+  - Utf8 [n]
+  - Utf8 [newKeyguardLock]
+  - Utf8 [newWakeLock]
+  - Utf8 [next]
+  - Utf8 [nothing]
+  - Utf8 [onAccessibilityEvent]
+  - Utf8 [onInterrupt]
+  - Utf8 [onServiceConnected]
+  - Utf8 [performAction]
+  - Utf8 [performGlobalAction]
+  - Utf8 [play]
+  - Utf8 [power]
+  - Utf8 [printStackTrace]
+  - Utf8 [put]
+  - Utf8 [release]
+  - Utf8 [send]
+  - Utf8 [show]
+  - Utf8 [size]
+  - Utf8 [sleep]
+  - Utf8 [split]
+  - Utf8 [startActivity]
+  - Utf8 [tempClass : ]
+  - Utf8 [toString]
+  - Utf8 [unLock]
+  - Utf8 [valueOf]
+  - Utf8 [vibrate]
+  - Utf8 [vibrator]
+  - Utf8 [voice]
+  - Utf8 [voice_vibrate]
+  - Utf8 [亮屏]
+  - Utf8 [口令红包]
+  - Utf8 [屏幕处于锁屏状态！]
+  - Utf8 [异常：]
+  - Utf8 [手慢了]
+  - Utf8 [抢红包服务已被中断！！！]
+  - Utf8 [服务已开启！！！]
+  - Utf8 [查看红包]
+  - Utf8 [点击拆开]
+  - Utf8 [点击输入口令]
+  - Utf8 [该红包已超过]
+  - Utf8 [释放锁]
+  - Utf8 [领取红包]
+  - Utf8 [，]
+
+Fields (count = 14):
+  - Field:        a Ljava/lang/String;
+    Access flags: 0x12
+      = private final java.lang.String a
+    Class member attributes (count = 1):
+    - Constant value attribute:
+    - String [com.tencent.mobileqq]
+  - Field:        b Ljava/lang/String;
+    Access flags: 0x2
+      = private java.lang.String b
+  - Field:        c Landroid/app/KeyguardManager;
+    Access flags: 0x2
+      = private android.app.KeyguardManager c
+  - Field:        d Landroid/app/KeyguardManager$KeyguardLock;
+    Access flags: 0x2
+      = private android.app.KeyguardManager$KeyguardLock d
+  - Field:        e Landroid/os/PowerManager;
+    Access flags: 0x2
+      = private android.os.PowerManager e
+  - Field:        f Landroid/os/PowerManager$WakeLock;
+    Access flags: 0x2
+      = private android.os.PowerManager$WakeLock f
+  - Field:        g Landroid/os/Vibrator;
+    Access flags: 0x2
+      = private android.os.Vibrator g
+  - Field:        h Lcom/wei/grabmoney/a/b;
+    Access flags: 0x2
+      = private com.wei.grabmoney.a.b h
+  - Field:        i [Ljava/lang/String;
+    Access flags: 0x12
+      = private final java.lang.String[] i
+  - Field:        j Ljava/util/List;
+    Access flags: 0x12
+      = private final java.util.List j
+    Class member attributes (count = 1):
+    - Signature attribute:
+      - Utf8 [Ljava/util/List<Ljava/lang/String;>;]
+  - Field:        k Landroid/os/Handler;
+    Access flags: 0x12
+      = private final android.os.Handler k
+  - Field:        l Ljava/lang/String;
+    Access flags: 0x12
+      = private final java.lang.String l
+    Class member attributes (count = 1):
+    - Constant value attribute:
+    - String [，]
+  - Field:        m Landroid/media/SoundPool;
+    Access flags: 0x2
+      = private android.media.SoundPool m
+  - Field:        n Ljava/util/HashMap;
+    Access flags: 0x2
+      = private java.util.HashMap n
+    Class member attributes (count = 1):
+    - Signature attribute:
+      - Utf8 [Ljava/util/HashMap<Ljava/lang/Integer;Ljava/lang/Integer;>;]
+
+Methods (count = 15):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public GrabMoneyService()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 89, locals = 1, stack = 5):
+      [0] aload_0 v0
+      [1] invokespecial #100
+        - Methodref [android/accessibilityservice/AccessibilityService.<init> ()V]
+      [4] aload_0 v0
+      [5] ldc #17
+        - String [com.tencent.mobileqq]
+      [7] putfield #86
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.a Ljava/lang/String;]
+      [10] aload_0 v0
+      [11] ldc #4
+        - String []
+      [13] putfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [16] aload_0 v0
+      [17] iconst_5
+      [18] anewarray #76
+        - Class [java/lang/String]
+      [21] dup
+      [22] iconst_0
+      [23] ldc #15
+        - String [com.tencent.mm.ui.LauncherUI]
+      [25] aastore
+      [26] dup
+      [27] iconst_1
+      [28] ldc #13
+        - String [com.tencent.mm.plugin.luckymoney.ui.En_fba4b94f]
+      [30] aastore
+      [31] dup
+      [32] iconst_2
+      [33] ldc #14
+        - String [com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyDetailUI]
+      [35] aastore
+      [36] dup
+      [37] iconst_3
+      [38] ldc #21
+        - String [cooperation.qwallet.plugin.QWalletPluginProxyActivity]
+      [40] aastore
+      [41] dup
+      [42] iconst_4
+      [43] ldc #18
+        - String [com.tencent.mobileqq.activity.SplashActivity]
+      [45] aastore
+      [46] putfield #94
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.i [Ljava/lang/String;]
+      [49] aload_0 v0
+      [50] aload_0 v0
+      [51] getfield #94
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.i [Ljava/lang/String;]
+      [54] invokestatic #166
+        - Methodref [java/util/Arrays.asList ([Ljava/lang/Object;)Ljava/util/List;]
+      [57] putfield #95
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.j Ljava/util/List;]
+      [60] aload_0 v0
+      [61] new #61
+        - Class [android/os/Handler]
+      [64] dup
+      [65] invokespecial #112
+        - Methodref [android/os/Handler.<init> ()V]
+      [68] putfield #96
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.k Landroid/os/Handler;]
+      [71] aload_0 v0
+      [72] ldc #49
+        - String [，]
+      [74] putfield #97
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.l Ljava/lang/String;]
+      [77] aload_0 v0
+      [78] new #80
+        - Class [java/util/HashMap]
+      [81] dup
+      [82] invokespecial #167
+        - Methodref [java/util/HashMap.<init> ()V]
+      [85] putfield #99
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.n Ljava/util/HashMap;]
+      [88] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    Access flags: 0x1
+      = public void onAccessibilityEvent(android.view.accessibility.AccessibilityEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 326, locals = 6, stack = 4):
+      [0] aload_1 v1
+      [1] invokevirtual #119
+        - Methodref [android/view/accessibility/AccessibilityEvent.getEventType ()I]
+      [4] istore_2 v2
+      [5] ldc #7
+        - String [GrabMoneyService]
+      [7] new #77
+        - Class [java/lang/StringBuilder]
+      [10] dup
+      [11] invokespecial #161
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [14] ldc #23
+        - String [eventType = ]
+      [16] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [19] iload_2 v2
+      [20] invokevirtual #162
+        - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [23] invokevirtual #164
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [26] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [29] aload_1 v1
+      [30] invokevirtual #118
+        - Methodref [android/view/accessibility/AccessibilityEvent.getClassName ()Ljava/lang/CharSequence;]
+      [33] invokeinterface #171, 256
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [38] astore_3 v3
+      [39] ldc #7
+        - String [GrabMoneyService]
+      [41] new #77
+        - Class [java/lang/StringBuilder]
+      [44] dup
+      [45] invokespecial #161
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [48] ldc #30
+        - String [tempClass : ]
+      [50] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [53] aload_3 v3
+      [54] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [57] invokevirtual #164
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [60] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [63] iload_2 v2
+      [64] lookupswitch (5 offsets, default=261) (target=325)
+        8: offset = 60, target = 124
+        32: offset = 63, target = 127
+        64: offset = 52, target = 116
+        2048: offset = 76, target = 140
+        4096: offset = 76, target = 140
+        default: offset = 261, target = 325
+      [116] aload_0 v0
+      [117] aload_1 v1
+      [118] invokespecial #138
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityEvent;)V]
+      [121] goto +204 (target=325)
+      [124] goto +201 (target=325)
+      [127] aload_0 v0
+      [128] aload_1 v1
+      [129] invokevirtual #118
+        - Methodref [android/view/accessibility/AccessibilityEvent.getClassName ()Ljava/lang/CharSequence;]
+      [132] invokeinterface #171, 256
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [137] putfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [140] aload_0 v0
+      [141] getfield #95
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.j Ljava/util/List;]
+      [144] aload_0 v0
+      [145] getfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [148] invokeinterface #174, 512
+        - InterfaceMethodref [java/util/List.contains (Ljava/lang/Object;)Z]
+      [153] ifne +6 (target=159)
+      [156] goto +169 (target=325)
+      [159] aload_0 v0
+      [160] getfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [163] ldc #15
+        - String [com.tencent.mm.ui.LauncherUI]
+      [165] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [168] ifeq +17 (target=185)
+      [171] ldc #7
+        - String [GrabMoneyService]
+      [173] ldc #6
+        - String [--- 开始点红包 ---]
+      [175] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [178] aload_0 v0
+      [179] invokespecial #145
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.c ()V]
+      [182] goto +143 (target=325)
+      [185] aload_0 v0
+      [186] getfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [189] ldc #13
+        - String [com.tencent.mm.plugin.luckymoney.ui.En_fba4b94f]
+      [191] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [194] ifeq +70 (target=264)
+      [197] aload_0 v0
+      [198] invokespecial #143
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.b ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [201] astore v4
+      [203] aload v4
+      [205] ifnonnull +48 (target=253)
+      [208] aload_0 v0
+      [209] invokespecial #137
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a ()Ljava/util/List;]
+      [212] ifnonnull +32 (target=244)
+      [215] new #58
+        - Class [android/content/Intent]
+      [218] dup
+      [219] aload_0 v0
+      [220] ldc #71
+        - Class [com/wei/grabmoney/ui/EmptyActivity]
+      [222] invokespecial #107
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [225] astore v5
+      [227] aload v5
+      [229] ldc #1
+        - Integer [268435456]
+      [231] invokevirtual #108
+        - Methodref [android/content/Intent.addFlags (I)Landroid/content/Intent;]
+      [234] pop
+      [235] aload_0 v0
+      [236] aload v5
+      [238] invokevirtual #153
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.startActivity (Landroid/content/Intent;)V]
+      [241] goto +20 (target=261)
+      [244] aload_0 v0
+      [245] iconst_1
+      [246] invokevirtual #152
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.performGlobalAction (I)Z]
+      [249] pop
+      [250] goto +11 (target=261)
+      [253] aload v4
+      [255] bipush 16
+      [257] invokevirtual #130
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.performAction (I)Z]
+      [260] pop
+      [261] goto +64 (target=325)
+      [264] aload_0 v0
+      [265] getfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [268] ldc #14
+        - String [com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyDetailUI]
+      [270] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [273] ifeq +12 (target=285)
+      [276] aload_0 v0
+      [277] iconst_1
+      [278] invokevirtual #152
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.performGlobalAction (I)Z]
+      [281] pop
+      [282] goto +43 (target=325)
+      [285] aload_0 v0
+      [286] getfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [289] ldc #18
+        - String [com.tencent.mobileqq.activity.SplashActivity]
+      [291] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [294] ifeq +10 (target=304)
+      [297] aload_0 v0
+      [298] invokespecial #146
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.d ()V]
+      [301] goto +24 (target=325)
+      [304] aload_0 v0
+      [305] getfield #87
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.b Ljava/lang/String;]
+      [308] ldc #21
+        - String [cooperation.qwallet.plugin.QWalletPluginProxyActivity]
+      [310] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [313] ifeq +12 (target=325)
+      [316] aload_0 v0
+      [317] iconst_1
+      [318] invokevirtual #152
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.performGlobalAction (I)Z]
+      [321] pop
+      [322] goto +3 (target=325)
+      [325] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 13):
+        - [116] Var: ..., Stack: (empty)
+        - [124] Var: -2, Stack: (empty)
+        - [127] Var: ...[a:com/wei/grabmoney/service/GrabMoneyService][a:android/view/accessibility/AccessibilityEvent], Stack: (empty)
+        - [140] Var: -1, Stack: (empty)
+        - [159] Var: ..., Stack: (empty)
+        - [185] Var: ..., Stack: (empty)
+        - [244] Var: ..., Stack: (empty)
+        - [253] Var: [T][T][T][T][a:android/view/accessibility/AccessibilityNodeInfo], Stack: 
+        - [261] Var: , Stack: 
+        - [264] Var: ...[a:com/wei/grabmoney/service/GrabMoneyService], Stack: (empty)
+        - [285] Var: ..., Stack: (empty)
+        - [304] Var: ..., Stack: (empty)
+        - [325] Var: -1, Stack: (empty)
+  - Method:       a()Ljava/util/List;
+    Access flags: 0x2
+      = private java.util.List a()
+    Class member attributes (count = 2):
+    - Code attribute instructions (code length = 39, locals = 4, stack = 2):
+      [0] aload_0 v0
+      [1] invokevirtual #149
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getRootInActiveWindow ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [4] astore_1 v1
+      [5] aload_1 v1
+      [6] ldc #40
+        - String [手慢了]
+      [8] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [11] astore_2 v2
+      [12] aload_1 v1
+      [13] ldc #46
+        - String [该红包已超过]
+      [15] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [18] astore_3 v3
+      [19] aconst_null
+      [20] aload_2 v2
+      [21] ifacmpeq +16 (target=37)
+      [24] aload_2 v2
+      [25] invokeinterface #178, 256
+        - InterfaceMethodref [java/util/List.size ()I]
+      [30] ifle +7 (target=37)
+      [33] aload_2 v2
+      [34] goto +4 (target=38)
+      [37] aload_3 v3
+      [38] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 2):
+        - [37] Var: [T][T][T][a:java/util/List], Stack: 
+        - [38] Var: , Stack: [a:java/util/List]
+    - Signature attribute:
+      - Utf8 [()Ljava/util/List<Landroid/view/accessibility/AccessibilityNodeInfo;>;]
+  - Method:       a(Landroid/view/accessibility/AccessibilityEvent;)V
+    Access flags: 0x2
+      = private void a(android.view.accessibility.AccessibilityEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 174, locals = 9, stack = 3):
+      [0] aload_1 v1
+      [1] invokevirtual #121
+        - Methodref [android/view/accessibility/AccessibilityEvent.getText ()Ljava/util/List;]
+      [4] astore_2 v2
+      [5] aload_2 v2
+      [6] invokeinterface #176, 256
+        - InterfaceMethodref [java/util/List.isEmpty ()Z]
+      [11] ifne +162 (target=173)
+      [14] aload_2 v2
+      [15] invokeinterface #177, 256
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [20] astore_3 v3
+      [21] aload_3 v3
+      [22] invokeinterface #172, 256
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [27] ifeq +146 (target=173)
+      [30] aload_3 v3
+      [31] invokeinterface #173, 256
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [36] checkcast #72
+        - Class [java/lang/CharSequence]
+      [39] astore v4
+      [41] aload v4
+      [43] invokeinterface #171, 256
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [48] astore v5
+      [50] ldc #7
+        - String [GrabMoneyService]
+      [52] new #77
+        - Class [java/lang/StringBuilder]
+      [55] dup
+      [56] invokespecial #161
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [59] ldc #20
+        - String [content : ]
+      [61] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [64] aload v5
+      [66] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [69] invokevirtual #164
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [72] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [75] aload v5
+      [77] ldc #9
+        - String [[微信红包]]
+      [79] invokevirtual #158
+        - Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [82] ifne +13 (target=95)
+      [85] aload v5
+      [87] ldc #8
+        - String [[QQ红包]]
+      [89] invokevirtual #158
+        - Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [92] ifeq +78 (target=170)
+      [95] aload_0 v0
+      [96] getfield #88
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.c Landroid/app/KeyguardManager;]
+      [99] invokevirtual #102
+        - Methodref [android/app/KeyguardManager.inKeyguardRestrictedInputMode ()Z]
+      [102] ifeq +15 (target=117)
+      [105] ldc #7
+        - String [GrabMoneyService]
+      [107] ldc #38
+        - String [屏幕处于锁屏状态！]
+      [109] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [112] aload_0 v0
+      [113] iconst_1
+      [114] invokespecial #142
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Z)V]
+      [117] aload_1 v1
+      [118] invokevirtual #120
+        - Methodref [android/view/accessibility/AccessibilityEvent.getParcelableData ()Landroid/os/Parcelable;]
+      [121] ifnull +49 (target=170)
+      [124] aload_1 v1
+      [125] invokevirtual #120
+        - Methodref [android/view/accessibility/AccessibilityEvent.getParcelableData ()Landroid/os/Parcelable;]
+      [128] instanceof #54
+        - Class [android/app/Notification]
+      [131] ifeq +39 (target=170)
+      [134] aload_1 v1
+      [135] invokevirtual #120
+        - Methodref [android/view/accessibility/AccessibilityEvent.getParcelableData ()Landroid/os/Parcelable;]
+      [138] checkcast #54
+        - Class [android/app/Notification]
+      [141] astore v6
+      [143] aload v6
+      [145] getfield #85
+        - Fieldref [android/app/Notification.contentIntent Landroid/app/PendingIntent;]
+      [148] astore v7
+      [150] aload v7
+      [152] invokevirtual #105
+        - Methodref [android/app/PendingIntent.send ()V]
+      [155] goto +15 (target=170)
+      [158] astore v8
+      [160] ldc #7
+        - String [GrabMoneyService]
+      [162] aload v8
+      [164] invokevirtual #106
+        - Methodref [android/app/PendingIntent$CanceledException.getMessage ()Ljava/lang/String;]
+      [167] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [170] goto -149 (target=21)
+      [173] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (150 -> 155: 158):
+      - Class [android/app/PendingIntent$CanceledException]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 6):
+        - [21] Var: ...[T][a:java/util/Iterator], Stack: (empty)
+        - [95] Var: ..., Stack: (empty)
+        - [117] Var: ..., Stack: (empty)
+        - [158] Var: ..., Stack: [a:android/app/PendingIntent$CanceledException]
+        - [170] Var: ..., Stack: (empty)
+        - [173] Var: , Stack: 
+  - Method:       b()Landroid/view/accessibility/AccessibilityNodeInfo;
+    Access flags: 0x2
+      = private android.view.accessibility.AccessibilityNodeInfo b()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 40, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] invokevirtual #149
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getRootInActiveWindow ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [4] astore_1 v1
+      [5] aload_1 v1
+      [6] ifnonnull +5 (target=11)
+      [9] aconst_null
+      [10] areturn
+      [11] aload_1 v1
+      [12] ldc #16
+        - String [com.tencent.mm:id/bx4]
+      [14] invokevirtual #123
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByViewId (Ljava/lang/String;)Ljava/util/List;]
+      [17] astore_2 v2
+      [18] aload_2 v2
+      [19] invokeinterface #178, 256
+        - InterfaceMethodref [java/util/List.size ()I]
+      [24] ifle +14 (target=38)
+      [27] aload_2 v2
+      [28] iconst_0
+      [29] invokeinterface #175, 512
+        - InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
+      [34] checkcast #66
+        - Class [android/view/accessibility/AccessibilityNodeInfo]
+      [37] areturn
+      [38] aconst_null
+      [39] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 2):
+        - [11] Var: [T][a:android/view/accessibility/AccessibilityNodeInfo], Stack: 
+        - [38] Var: -2, Stack: (empty)
+  - Method:       c()V
+    Access flags: 0x2
+      = private void c()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 129, locals = 7, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #149
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getRootInActiveWindow ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [4] astore_1 v1
+      [5] aconst_null
+      [6] aload_1 v1
+      [7] ifacmpeq +121 (target=128)
+      [10] aload_1 v1
+      [11] ldc #48
+        - String [领取红包]
+      [13] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [16] astore_2 v2
+      [17] aload_2 v2
+      [18] ifnonnull +10 (target=28)
+      [21] aload_1 v1
+      [22] ldc #43
+        - String [查看红包]
+      [24] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [27] astore_2 v2
+      [28] aconst_null
+      [29] aload_2 v2
+      [30] ifacmpeq +98 (target=128)
+      [33] aload_2 v2
+      [34] invokeinterface #178, 256
+        - InterfaceMethodref [java/util/List.size ()I]
+      [39] ifle +89 (target=128)
+      [42] aload_0 v0
+      [43] ldc #26
+        - String [mark]
+      [45] iconst_0
+      [46] invokevirtual #150
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [49] astore_3 v3
+      [50] aload_3 v3
+      [51] ifnonnull +8 (target=59)
+      [54] ldc #4
+        - String []
+      [56] goto +13 (target=69)
+      [59] aload_3 v3
+      [60] ldc #27
+        - String [mark_work]
+      [62] ldc #4
+        - String []
+      [64] invokeinterface #170, 768
+        - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [69] astore v4
+      [71] aload_2 v2
+      [72] invokeinterface #177, 256
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [77] astore v5
+      [79] aload v5
+      [81] invokeinterface #172, 256
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [86] ifeq +42 (target=128)
+      [89] aload v5
+      [91] invokeinterface #173, 256
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [96] checkcast #66
+        - Class [android/view/accessibility/AccessibilityNodeInfo]
+      [99] astore v6
+      [101] aload_0 v0
+      [102] aload v6
+      [104] aload v4
+      [106] invokevirtual #140
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)Z]
+      [109] ifeq +16 (target=125)
+      [112] ldc #7
+        - String [GrabMoneyService]
+      [114] ldc #25
+        - String [luckMoneyInfo.isNodeCanOpen]
+      [116] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [119] aload_0 v0
+      [120] aload v6
+      [122] invokespecial #139
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+      [125] goto -46 (target=79)
+      [128] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 6):
+        - [28] Var: ...[T][a:java/util/List], Stack: (empty)
+        - [59] Var: ...[a:android/content/SharedPreferences], Stack: (empty)
+        - [69] Var: [a:com/wei/grabmoney/service/GrabMoneyService][T][a:java/util/List], Stack: [a:java/lang/String]
+        - [79] Var: [a:com/wei/grabmoney/service/GrabMoneyService][T][T][T][a:java/lang/String][a:java/util/Iterator], Stack: 
+        - [125] Var: ..., Stack: (empty)
+        - [128] Var: , Stack: 
+  - Method:       d()V
+    Access flags: 0x2
+      = private void d()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 330, locals = 11, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #149
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getRootInActiveWindow ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [4] astore_1 v1
+      [5] aconst_null
+      [6] aload_1 v1
+      [7] ifacmpeq +322 (target=329)
+      [10] aload_1 v1
+      [11] ldc #44
+        - String [点击拆开]
+      [13] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [16] astore_2 v2
+      [17] aconst_null
+      [18] aload_2 v2
+      [19] ifacmpeq +85 (target=104)
+      [22] aload_2 v2
+      [23] invokeinterface #178, 256
+        - InterfaceMethodref [java/util/List.size ()I]
+      [28] ifle +76 (target=104)
+      [31] aload_2 v2
+      [32] invokeinterface #177, 256
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [37] astore_3 v3
+      [38] aload_3 v3
+      [39] invokeinterface #172, 256
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [44] ifeq +60 (target=104)
+      [47] aload_3 v3
+      [48] invokeinterface #173, 256
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [53] checkcast #66
+        - Class [android/view/accessibility/AccessibilityNodeInfo]
+      [56] astore v4
+      [58] aload_0 v0
+      [59] aload v4
+      [61] invokespecial #144
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.b (Landroid/view/accessibility/AccessibilityNodeInfo;)Z]
+      [64] ifeq +37 (target=101)
+      [67] aload_0 v0
+      [68] getfield #93
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.h Lcom/wei/grabmoney/a/b;]
+      [71] ldc #22
+        - String [delay_time]
+      [73] fconst_0
+      [74] invokevirtual #135
+        - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;F)F]
+      [77] fstore v5
+      [79] fload v5
+      [81] f2l
+      [82] invokestatic #165
+        - Methodref [java/lang/Thread.sleep (J)V]
+      [85] aload_0 v0
+      [86] aload v4
+      [88] invokespecial #139
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+      [91] goto +10 (target=101)
+      [94] astore v6
+      [96] aload v6
+      [98] invokevirtual #157
+        - Methodref [java/lang/InterruptedException.printStackTrace ()V]
+      [101] goto -63 (target=38)
+      [104] aload_1 v1
+      [105] ldc #37
+        - String [口令红包]
+      [107] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [110] astore_3 v3
+      [111] aconst_null
+      [112] aload_3 v3
+      [113] ifacmpeq +216 (target=329)
+      [116] aload_3 v3
+      [117] invokeinterface #178, 256
+        - InterfaceMethodref [java/util/List.size ()I]
+      [122] ifle +207 (target=329)
+      [125] aload_1 v1
+      [126] ldc #19
+        - String [com.tencent.mobileqq:id/fun_btn]
+      [128] invokevirtual #123
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByViewId (Ljava/lang/String;)Ljava/util/List;]
+      [131] astore v4
+      [133] aload v4
+      [135] ifnonnull +7 (target=142)
+      [138] aconst_null
+      [139] goto +14 (target=153)
+      [142] aload v4
+      [144] iconst_0
+      [145] invokeinterface #175, 512
+        - InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
+      [150] checkcast #66
+        - Class [android/view/accessibility/AccessibilityNodeInfo]
+      [153] astore v5
+      [155] aload_3 v3
+      [156] invokeinterface #177, 256
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [161] astore v6
+      [163] aload v6
+      [165] invokeinterface #172, 256
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [170] ifeq +46 (target=216)
+      [173] aload v6
+      [175] invokeinterface #173, 256
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [180] checkcast #66
+        - Class [android/view/accessibility/AccessibilityNodeInfo]
+      [183] astore v7
+      [185] aload v7
+      [187] invokevirtual #127
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getText ()Ljava/lang/CharSequence;]
+      [190] invokeinterface #171, 256
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [195] astore v8
+      [197] aload v8
+      [199] ldc #37
+        - String [口令红包]
+      [201] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [204] ifeq +9 (target=213)
+      [207] aload_0 v0
+      [208] aload v7
+      [210] invokespecial #139
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+      [213] goto -50 (target=163)
+      [216] aload_1 v1
+      [217] ldc #45
+        - String [点击输入口令]
+      [219] invokevirtual #122
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.findAccessibilityNodeInfosByText (Ljava/lang/String;)Ljava/util/List;]
+      [222] astore v6
+      [224] aconst_null
+      [225] aload v6
+      [227] ifacmpeq +102 (target=329)
+      [230] aload v6
+      [232] invokeinterface #178, 256
+        - InterfaceMethodref [java/util/List.size ()I]
+      [237] ifle +92 (target=329)
+      [240] aload v6
+      [242] invokeinterface #177, 256
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [247] astore v7
+      [249] aload v7
+      [251] invokeinterface #172, 256
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [256] ifeq +73 (target=329)
+      [259] aload v7
+      [261] invokeinterface #173, 256
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [266] checkcast #66
+        - Class [android/view/accessibility/AccessibilityNodeInfo]
+      [269] astore v8
+      [271] aload_0 v0
+      [272] aload v8
+      [274] invokespecial #139
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Landroid/view/accessibility/AccessibilityNodeInfo;)V]
+      [277] aload v5
+      [279] ifnull +47 (target=326)
+      [282] aload v5
+      [284] invokevirtual #129
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.isEnabled ()Z]
+      [287] ifeq +39 (target=326)
+      [290] aload_0 v0
+      [291] getfield #93
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.h Lcom/wei/grabmoney/a/b;]
+      [294] ldc #22
+        - String [delay_time]
+      [296] fconst_0
+      [297] invokevirtual #135
+        - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;F)F]
+      [300] fstore v9
+      [302] fload v9
+      [304] f2l
+      [305] invokestatic #165
+        - Methodref [java/lang/Thread.sleep (J)V]
+      [308] aload v5
+      [310] bipush 16
+      [312] invokevirtual #130
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.performAction (I)Z]
+      [315] pop
+      [316] goto +10 (target=326)
+      [319] astore v10
+      [321] aload v10
+      [323] invokevirtual #157
+        - Methodref [java/lang/InterruptedException.printStackTrace ()V]
+      [326] goto -77 (target=249)
+      [329] return
+      Code attribute exceptions (count = 2):
+      - ExceptionInfo (79 -> 91: 94):
+      - Class [java/lang/InterruptedException]
+      - ExceptionInfo (302 -> 316: 319):
+      - Class [java/lang/InterruptedException]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 13):
+        - [38] Var: ...[a:android/view/accessibility/AccessibilityNodeInfo][T][a:java/util/Iterator], Stack: (empty)
+        - [94] Var: ..., Stack: [a:java/lang/InterruptedException]
+        - [101] Var: ..., Stack: (empty)
+        - [104] Var: -2, Stack: (empty)
+        - [142] Var: ...[T][a:java/util/List][a:java/util/List], Stack: (empty)
+        - [153] Var: [a:com/wei/grabmoney/service/GrabMoneyService][a:android/view/accessibility/AccessibilityNodeInfo][T][a:java/util/List], Stack: [a:android/view/accessibility/AccessibilityNodeInfo]
+        - [163] Var: [a:com/wei/grabmoney/service/GrabMoneyService][a:android/view/accessibility/AccessibilityNodeInfo][T][T][T][a:android/view/accessibility/AccessibilityNodeInfo][a:java/util/Iterator], Stack: 
+        - [213] Var: ..., Stack: (empty)
+        - [216] Var: -1, Stack: (empty)
+        - [249] Var: [a:com/wei/grabmoney/service/GrabMoneyService][T][T][T][T][a:android/view/accessibility/AccessibilityNodeInfo][T][a:java/util/Iterator], Stack: 
+        - [319] Var: ..., Stack: [a:java/lang/InterruptedException]
+        - [326] Var: ..., Stack: (empty)
+        - [329] Var: , Stack: 
+  - Method:       a(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    Access flags: 0x2
+      = private void a(android.view.accessibility.AccessibilityNodeInfo)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 41, locals = 3, stack = 2):
+      [0] aload_1 v1
+      [1] invokevirtual #126
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getParent ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [4] astore_2 v2
+      [5] aconst_null
+      [6] aload_2 v2
+      [7] ifacmpeq +33 (target=40)
+      [10] aload_2 v2
+      [11] invokevirtual #128
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.isClickable ()Z]
+      [14] ifeq +18 (target=32)
+      [17] ldc #7
+        - String [GrabMoneyService]
+      [19] ldc #5
+        - String [--- clickWallet ---]
+      [21] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [24] aload_2 v2
+      [25] bipush 16
+      [27] invokevirtual #130
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.performAction (I)Z]
+      [30] pop
+      [31] return
+      [32] aload_2 v2
+      [33] invokevirtual #126
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getParent ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [36] astore_2 v2
+      [37] goto -32 (target=5)
+      [40] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 3):
+        - [5] Var: [T][T][a:android/view/accessibility/AccessibilityNodeInfo], Stack: 
+        - [32] Var: ..., Stack: (empty)
+        - [40] Var: -3, Stack: (empty)
+  - Method:       b(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+    Access flags: 0x2
+      = private boolean b(android.view.accessibility.AccessibilityNodeInfo)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 126, locals = 12, stack = 3):
+      [0] iconst_1
+      [1] istore_2 v2
+      [2] aload_0 v0
+      [3] ldc #26
+        - String [mark]
+      [5] iconst_0
+      [6] invokevirtual #150
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] astore_3 v3
+      [10] aload_3 v3
+      [11] ifnonnull +8 (target=19)
+      [14] ldc #4
+        - String []
+      [16] goto +13 (target=29)
+      [19] aload_3 v3
+      [20] ldc #27
+        - String [mark_work]
+      [22] ldc #4
+        - String []
+      [24] invokeinterface #170, 768
+        - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [29] astore v4
+      [31] ldc #4
+        - String []
+      [33] aload v4
+      [35] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [38] ifeq +8 (target=46)
+      [41] iconst_1
+      [42] istore_2 v2
+      [43] goto +81 (target=124)
+      [46] aload_1 v1
+      [47] invokevirtual #126
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getParent ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [50] astore v5
+      [52] aload v5
+      [54] iconst_0
+      [55] invokevirtual #124
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getChild (I)Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [58] invokevirtual #127
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getText ()Ljava/lang/CharSequence;]
+      [61] invokeinterface #171, 256
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [66] astore v6
+      [68] aload v4
+      [70] ldc #49
+        - String [，]
+      [72] invokevirtual #160
+        - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+      [75] astore v7
+      [77] aload v7
+      [79] astore v8
+      [81] aload v8
+      [83] arraylength
+      [84] istore v9
+      [86] iconst_0
+      [87] istore v10
+      [89] iload v10
+      [91] iload v9
+      [93] ificmpge +31 (target=124)
+      [96] aload v8
+      [98] iload v10
+      [100] aaload
+      [101] astore v11
+      [103] aload v6
+      [105] aload v11
+      [107] invokevirtual #158
+        - Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [110] ifeq +8 (target=118)
+      [113] iconst_0
+      [114] istore_2 v2
+      [115] goto +9 (target=124)
+      [118] iinc v10, 1
+      [121] goto -32 (target=89)
+      [124] iload_2 v2
+      [125] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 6):
+        - [19] Var: [T][a:android/view/accessibility/AccessibilityNodeInfo][i][a:android/content/SharedPreferences], Stack: 
+        - [29] Var: [T][a:android/view/accessibility/AccessibilityNodeInfo][i], Stack: [a:java/lang/String]
+        - [46] Var: ...[T][a:java/lang/String], Stack: (empty)
+        - [89] Var: [T][T][i][T][T][T][a:java/lang/String][T][a:[Ljava/lang/String;][i][i], Stack: 
+        - [118] Var: ..., Stack: (empty)
+        - [124] Var: [T][T][i], Stack: 
+  - Method:       a(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)Z
+    Access flags: 0x1
+      = public boolean a(android.view.accessibility.AccessibilityNodeInfo,java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 136, locals = 10, stack = 3):
+      [0] aload_1 v1
+      [1] invokevirtual #126
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getParent ()Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [4] astore_3 v3
+      [5] ldc #11
+        - String [android.widget.LinearLayout]
+      [7] aload_3 v3
+      [8] invokevirtual #125
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getClassName ()Ljava/lang/CharSequence;]
+      [11] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [14] ifne +5 (target=19)
+      [17] iconst_0
+      [18] ireturn
+      [19] aload_3 v3
+      [20] iconst_0
+      [21] invokevirtual #124
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getChild (I)Landroid/view/accessibility/AccessibilityNodeInfo;]
+      [24] invokevirtual #127
+        - Methodref [android/view/accessibility/AccessibilityNodeInfo.getText ()Ljava/lang/CharSequence;]
+      [27] invokeinterface #171, 256
+        - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
+      [32] astore v4
+      [34] ldc #4
+        - String []
+      [36] aload_2 v2
+      [37] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [40] ifne +64 (target=104)
+      [43] aload_2 v2
+      [44] ldc #49
+        - String [，]
+      [46] invokevirtual #158
+        - Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [49] ifeq +55 (target=104)
+      [52] aload_2 v2
+      [53] ldc #49
+        - String [，]
+      [55] invokevirtual #160
+        - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+      [58] astore v5
+      [60] aload v5
+      [62] astore v6
+      [64] aload v6
+      [66] arraylength
+      [67] istore v7
+      [69] iconst_0
+      [70] istore v8
+      [72] iload v8
+      [74] iload v7
+      [76] ificmpge +28 (target=104)
+      [79] aload v6
+      [81] iload v8
+      [83] aaload
+      [84] astore v9
+      [86] aload v4
+      [88] aload v9
+      [90] invokevirtual #158
+        - Methodref [java/lang/String.contains (Ljava/lang/CharSequence;)Z]
+      [93] ifeq +5 (target=98)
+      [96] iconst_0
+      [97] ireturn
+      [98] iinc v8, 1
+      [101] goto -29 (target=72)
+      [104] iconst_1
+      [105] ireturn
+      [106] astore_3 v3
+      [107] ldc #39
+        - String [异常：]
+      [109] new #77
+        - Class [java/lang/StringBuilder]
+      [112] dup
+      [113] invokespecial #161
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [116] aload_3 v3
+      [117] invokevirtual #154
+        - Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
+      [120] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [123] ldc #4
+        - String []
+      [125] invokevirtual #163
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [128] invokevirtual #164
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [131] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [134] iconst_0
+      [135] ireturn
+      Code attribute exceptions (count = 3):
+      - ExceptionInfo (0 -> 18: 106):
+      - Class [java/lang/Exception]
+      - ExceptionInfo (19 -> 97: 106):
+      - Class [java/lang/Exception]
+      - ExceptionInfo (98 -> 105: 106):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 5):
+        - [19] Var: [T][T][a:java/lang/String][a:android/view/accessibility/AccessibilityNodeInfo], Stack: 
+        - [72] Var: [T][T][T][T][a:java/lang/String][T][a:[Ljava/lang/String;][i][i], Stack: 
+        - [98] Var: ..., Stack: (empty)
+        - [104] Var: , Stack: 
+        - [106] Var: ..., Stack: [a:java/lang/Exception]
+  - Method:       onInterrupt()V
+    Access flags: 0x1
+      = public void onInterrupt()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 7, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] ldc #41
+        - String [抢红包服务已被中断！！！]
+      [3] invokespecial #141
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Ljava/lang/String;)V]
+      [6] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onServiceConnected()V
+    Access flags: 0x4
+      = protected void onServiceConnected()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 79, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #101
+        - Methodref [android/accessibilityservice/AccessibilityService.onServiceConnected ()V]
+      [4] aload_0 v0
+      [5] aload_0 v0
+      [6] ldc #29
+        - String [power]
+      [8] invokevirtual #151
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [11] checkcast #62
+        - Class [android/os/PowerManager]
+      [14] putfield #90
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.e Landroid/os/PowerManager;]
+      [17] aload_0 v0
+      [18] aload_0 v0
+      [19] ldc #24
+        - String [keyguard]
+      [21] invokevirtual #151
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [24] checkcast #52
+        - Class [android/app/KeyguardManager]
+      [27] putfield #88
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.c Landroid/app/KeyguardManager;]
+      [30] aload_0 v0
+      [31] aload_0 v0
+      [32] getfield #88
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.c Landroid/app/KeyguardManager;]
+      [35] ldc #31
+        - String [unLock]
+      [37] invokevirtual #103
+        - Methodref [android/app/KeyguardManager.newKeyguardLock (Ljava/lang/String;)Landroid/app/KeyguardManager$KeyguardLock;]
+      [40] putfield #89
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.d Landroid/app/KeyguardManager$KeyguardLock;]
+      [43] aload_0 v0
+      [44] aload_0 v0
+      [45] ldc #33
+        - String [vibrator]
+      [47] invokevirtual #151
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [50] checkcast #64
+        - Class [android/os/Vibrator]
+      [53] putfield #92
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.g Landroid/os/Vibrator;]
+      [56] aload_0 v0
+      [57] new #69
+        - Class [com/wei/grabmoney/a/b]
+      [60] dup
+      [61] aload_0 v0
+      [62] invokespecial #134
+        - Methodref [com/wei/grabmoney/a/b.<init> (Landroid/content/Context;)V]
+      [65] putfield #93
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.h Lcom/wei/grabmoney/a/b;]
+      [68] aload_0 v0
+      [69] invokespecial #147
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.e ()V]
+      [72] aload_0 v0
+      [73] ldc #42
+        - String [服务已开启！！！]
+      [75] invokespecial #141
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.a (Ljava/lang/String;)V]
+      [78] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       e()V
+    Access flags: 0x2
+      = private void e()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 41, locals = 1, stack = 6):
+      [0] aload_0 v0
+      [1] new #60
+        - Class [android/media/SoundPool]
+      [4] dup
+      [5] iconst_1
+      [6] iconst_1
+      [7] iconst_5
+      [8] invokespecial #109
+        - Methodref [android/media/SoundPool.<init> (III)V]
+      [11] putfield #98
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.m Landroid/media/SoundPool;]
+      [14] aload_0 v0
+      [15] getfield #99
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.n Ljava/util/HashMap;]
+      [18] iconst_1
+      [19] invokestatic #156
+        - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [22] aload_0 v0
+      [23] getfield #98
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.m Landroid/media/SoundPool;]
+      [26] aload_0 v0
+      [27] ldc #3
+        - Integer [2131165184]
+      [29] iconst_1
+      [30] invokevirtual #110
+        - Methodref [android/media/SoundPool.load (Landroid/content/Context;II)I]
+      [33] invokestatic #156
+        - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [36] invokevirtual #169
+        - Methodref [java/util/HashMap.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
+      [39] pop
+      [40] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Z)V
+    Access flags: 0x2
+      = private void a(boolean)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 212, locals = 3, stack = 7):
+      [0] iload_1 v1
+      [1] ifeq +184 (target=185)
+      [4] aload_0 v0
+      [5] getfield #93
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.h Lcom/wei/grabmoney/a/b;]
+      [8] ldc #10
+        - String [alarm]
+      [10] ldc #4
+        - String []
+      [12] invokevirtual #136
+        - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [15] astore_2 v2
+      [16] aload_2 v2
+      [17] ldc #28
+        - String [nothing]
+      [19] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [22] ifeq +4 (target=26)
+      [25] return
+      [26] aload_0 v0
+      [27] getfield #89
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.d Landroid/app/KeyguardManager$KeyguardLock;]
+      [30] invokevirtual #104
+        - Methodref [android/app/KeyguardManager$KeyguardLock.disableKeyguard ()V]
+      [33] aload_0 v0
+      [34] getfield #90
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.e Landroid/os/PowerManager;]
+      [37] invokevirtual #113
+        - Methodref [android/os/PowerManager.isScreenOn ()Z]
+      [40] ifne +32 (target=72)
+      [43] aload_0 v0
+      [44] aload_0 v0
+      [45] getfield #90
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.e Landroid/os/PowerManager;]
+      [48] ldc #2
+        - Integer [268435466]
+      [50] ldc #12
+        - String [bright]
+      [52] invokevirtual #114
+        - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+      [55] putfield #91
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.f Landroid/os/PowerManager$WakeLock;]
+      [58] aload_0 v0
+      [59] getfield #91
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.f Landroid/os/PowerManager$WakeLock;]
+      [62] invokevirtual #115
+        - Methodref [android/os/PowerManager$WakeLock.acquire ()V]
+      [65] ldc #7
+        - String [GrabMoneyService]
+      [67] ldc #36
+        - String [亮屏]
+      [69] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [72] aload_2 v2
+      [73] ldc #35
+        - String [voice_vibrate]
+      [75] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [78] ifeq +46 (target=124)
+      [81] aload_0 v0
+      [82] getfield #98
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.m Landroid/media/SoundPool;]
+      [85] aload_0 v0
+      [86] getfield #99
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.n Ljava/util/HashMap;]
+      [89] iconst_1
+      [90] invokestatic #156
+        - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [93] invokevirtual #168
+        - Methodref [java/util/HashMap.get (Ljava/lang/Object;)Ljava/lang/Object;]
+      [96] checkcast #74
+        - Class [java/lang/Integer]
+      [99] invokevirtual #155
+        - Methodref [java/lang/Integer.intValue ()I]
+      [102] fconst_1
+      [103] fconst_1
+      [104] iconst_0
+      [105] iconst_0
+      [106] fconst_1
+      [107] invokevirtual #111
+        - Methodref [android/media/SoundPool.play (IFFIIF)I]
+      [110] pop
+      [111] aload_0 v0
+      [112] getfield #92
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.g Landroid/os/Vibrator;]
+      [115] ldc2_w #83
+        - Long [6000]
+      [118] invokevirtual #117
+        - Methodref [android/os/Vibrator.vibrate (J)V]
+      [121] goto +64 (target=185)
+      [124] aload_2 v2
+      [125] ldc #34
+        - String [voice]
+      [127] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [130] ifeq +36 (target=166)
+      [133] aload_0 v0
+      [134] getfield #98
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.m Landroid/media/SoundPool;]
+      [137] aload_0 v0
+      [138] getfield #99
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.n Ljava/util/HashMap;]
+      [141] iconst_1
+      [142] invokestatic #156
+        - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [145] invokevirtual #168
+        - Methodref [java/util/HashMap.get (Ljava/lang/Object;)Ljava/lang/Object;]
+      [148] checkcast #74
+        - Class [java/lang/Integer]
+      [151] invokevirtual #155
+        - Methodref [java/lang/Integer.intValue ()I]
+      [154] fconst_1
+      [155] fconst_1
+      [156] iconst_0
+      [157] iconst_0
+      [158] fconst_1
+      [159] invokevirtual #111
+        - Methodref [android/media/SoundPool.play (IFFIIF)I]
+      [162] pop
+      [163] goto +22 (target=185)
+      [166] aload_2 v2
+      [167] ldc #32
+        - String [vibrate]
+      [169] invokevirtual #159
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [172] ifeq +13 (target=185)
+      [175] aload_0 v0
+      [176] getfield #92
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.g Landroid/os/Vibrator;]
+      [179] ldc2_w #83
+        - Long [6000]
+      [182] invokevirtual #117
+        - Methodref [android/os/Vibrator.vibrate (J)V]
+      [185] aload_0 v0
+      [186] getfield #91
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.f Landroid/os/PowerManager$WakeLock;]
+      [189] ifnull +22 (target=211)
+      [192] aload_0 v0
+      [193] getfield #91
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.f Landroid/os/PowerManager$WakeLock;]
+      [196] invokevirtual #116
+        - Methodref [android/os/PowerManager$WakeLock.release ()V]
+      [199] aload_0 v0
+      [200] aconst_null
+      [201] putfield #91
+        - Fieldref [com/wei/grabmoney/service/GrabMoneyService.f Landroid/os/PowerManager$WakeLock;]
+      [204] ldc #7
+        - String [GrabMoneyService]
+      [206] ldc #47
+        - String [释放锁]
+      [208] invokestatic #133
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [211] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 6):
+        - [26] Var: [a:com/wei/grabmoney/service/GrabMoneyService][T][a:java/lang/String], Stack: 
+        - [72] Var: ..., Stack: (empty)
+        - [124] Var: ..., Stack: (empty)
+        - [166] Var: ..., Stack: (empty)
+        - [185] Var: -2, Stack: (empty)
+        - [211] Var: -1, Stack: (empty)
+  - Method:       a(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void a(java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 13, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #148
+        - Methodref [com/wei/grabmoney/service/GrabMoneyService.getApplicationContext ()Landroid/content/Context;]
+      [4] aload_1 v1
+      [5] iconst_0
+      [6] invokestatic #131
+        - Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [9] invokevirtual #132
+        - Methodref [android/widget/Toast.show ()V]
+      [12] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  - Inner classes attribute (count = 4)
+    - InnerClassesInfo:
+      Access flags:  0x1 = public 
+      - Class [android/app/KeyguardManager$KeyguardLock]
+      - Class [android/app/KeyguardManager]
+      - Utf8 [KeyguardLock]
+    - InnerClassesInfo:
+      Access flags:  0x11 = public final 
+      - Class [android/os/PowerManager$WakeLock]
+      - Class [android/os/PowerManager]
+      - Utf8 [WakeLock]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      - Class [android/app/PendingIntent$CanceledException]
+      - Class [android/app/PendingIntent]
+      - Utf8 [CanceledException]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      - Class [android/app/Notification$Builder]
+      - Class [android/app/Notification]
+      - Utf8 [Builder]
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/ui/a
+  Superclass:    android/app/Activity
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x21
+    = public class com.wei.grabmoney.ui.a extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 135):
+  - Integer [2130968581]
+  - Integer [2130968584]
+  - Integer [2130968589]
+  - Integer [2130968590]
+  - Integer [2130968591]
+  - Integer [2130968592]
+  - Integer [2131034114]
+  - Class [android/app/Activity]
+  - Class [android/app/AlertDialog]
+  - Class [android/app/AlertDialog$Builder]
+  - Class [android/content/DialogInterface]
+  - Class [android/content/DialogInterface$OnClickListener]
+  - Class [android/view/View]
+  - Class [android/view/View$OnClickListener]
+  - Class [android/view/ViewGroup]
+  - Class [android/view/ViewGroup$LayoutParams]
+  - Class [android/widget/LinearLayout]
+  - Class [android/widget/RelativeLayout]
+  - Class [android/widget/TextView]
+  - Class [com/wei/grabmoney/ui/a]
+  - Class [com/wei/grabmoney/ui/a$1]
+  - Class [java/lang/Class]
+  - Class [java/lang/Object]
+  - Fieldref [com/wei/grabmoney/ui/a.a Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/ui/a.b Landroid/content/Context;]
+  - Fieldref [com/wei/grabmoney/ui/a.c Landroid/widget/LinearLayout;]
+  - Fieldref [com/wei/grabmoney/ui/a.d Landroid/widget/LinearLayout;]
+  - Fieldref [com/wei/grabmoney/ui/a.e Landroid/widget/RelativeLayout;]
+  - Fieldref [com/wei/grabmoney/ui/a.f Landroid/widget/LinearLayout;]
+  - Fieldref [com/wei/grabmoney/ui/a.g Landroid/view/View;]
+  - Fieldref [com/wei/grabmoney/ui/a.h Landroid/widget/TextView;]
+  - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/app/Activity.setContentView (Landroid/view/View;)V]
+  - Methodref [android/view/View.inflate (Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
+  - Methodref [android/view/View.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
+  - Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  - Methodref [android/view/View.setVisibility (I)V]
+  - Methodref [android/view/ViewGroup$LayoutParams.<init> (II)V]
+  - Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
+  - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [android/widget/TextView.setVisibility (I)V]
+  - Methodref [com/wei/grabmoney/ui/a.a ()V]
+  - Methodref [com/wei/grabmoney/ui/a$1.<init> (Lcom/wei/grabmoney/ui/a;)V]
+  - Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
+  - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (II)V]
+  - NameAndType [<init> (Lcom/wei/grabmoney/ui/a;)V]
+  - NameAndType [a ()V]
+  - NameAndType [a Ljava/lang/String;]
+  - NameAndType [addView (Landroid/view/View;)V]
+  - NameAndType [b Landroid/content/Context;]
+  - NameAndType [c Landroid/widget/LinearLayout;]
+  - NameAndType [d Landroid/widget/LinearLayout;]
+  - NameAndType [e Landroid/widget/RelativeLayout;]
+  - NameAndType [f Landroid/widget/LinearLayout;]
+  - NameAndType [findViewById (I)Landroid/view/View;]
+  - NameAndType [g Landroid/view/View;]
+  - NameAndType [getClass ()Ljava/lang/Class;]
+  - NameAndType [getSimpleName ()Ljava/lang/String;]
+  - NameAndType [h Landroid/widget/TextView;]
+  - NameAndType [i Landroid/widget/LinearLayout;]
+  - NameAndType [inflate (Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [setContentView (Landroid/view/View;)V]
+  - NameAndType [setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
+  - NameAndType [setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  - NameAndType [setText (Ljava/lang/CharSequence;)V]
+  - NameAndType [setVisibility (I)V]
+  - Utf8 [()Ljava/lang/Class;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [(I)Landroid/view/View;]
+  - Utf8 [(I)V]
+  - Utf8 [(II)V]
+  - Utf8 [(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [(Landroid/view/View$OnClickListener;)V]
+  - Utf8 [(Landroid/view/View;)V]
+  - Utf8 [(Landroid/view/ViewGroup$LayoutParams;)V]
+  - Utf8 [(Lcom/wei/grabmoney/ui/a;)V]
+  - Utf8 [(Ljava/lang/CharSequence;)V]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [<init>]
+  - Utf8 [Builder]
+  - Utf8 [Code]
+  - Utf8 [InnerClasses]
+  - Utf8 [Landroid/content/Context;]
+  - Utf8 [Landroid/view/View;]
+  - Utf8 [Landroid/widget/LinearLayout;]
+  - Utf8 [Landroid/widget/RelativeLayout;]
+  - Utf8 [Landroid/widget/TextView;]
+  - Utf8 [LayoutParams]
+  - Utf8 [Ljava/lang/String;]
+  - Utf8 [OnClickListener]
+  - Utf8 [a]
+  - Utf8 [addView]
+  - Utf8 [android/app/Activity]
+  - Utf8 [android/app/AlertDialog]
+  - Utf8 [android/app/AlertDialog$Builder]
+  - Utf8 [android/content/DialogInterface]
+  - Utf8 [android/content/DialogInterface$OnClickListener]
+  - Utf8 [android/view/View]
+  - Utf8 [android/view/View$OnClickListener]
+  - Utf8 [android/view/ViewGroup]
+  - Utf8 [android/view/ViewGroup$LayoutParams]
+  - Utf8 [android/widget/LinearLayout]
+  - Utf8 [android/widget/RelativeLayout]
+  - Utf8 [android/widget/TextView]
+  - Utf8 [b]
+  - Utf8 [c]
+  - Utf8 [com/wei/grabmoney/ui/a]
+  - Utf8 [com/wei/grabmoney/ui/a$1]
+  - Utf8 [d]
+  - Utf8 [e]
+  - Utf8 [f]
+  - Utf8 [findViewById]
+  - Utf8 [g]
+  - Utf8 [getClass]
+  - Utf8 [getSimpleName]
+  - Utf8 [h]
+  - Utf8 [i]
+  - Utf8 [inflate]
+  - Utf8 [java/lang/Class]
+  - Utf8 [java/lang/Object]
+  - Utf8 [onCreate]
+  - Utf8 [setContentView]
+  - Utf8 [setLayoutParams]
+  - Utf8 [setOnClickListener]
+  - Utf8 [setText]
+  - Utf8 [setVisibility]
+
+Fields (count = 9):
+  - Field:        a Ljava/lang/String;
+    Access flags: 0x4
+      = protected java.lang.String a
+  - Field:        b Landroid/content/Context;
+    Access flags: 0x4
+      = protected android.content.Context b
+  - Field:        i Landroid/widget/LinearLayout;
+    Access flags: 0x2
+      = private android.widget.LinearLayout i
+  - Field:        c Landroid/widget/LinearLayout;
+    Access flags: 0x4
+      = protected android.widget.LinearLayout c
+  - Field:        d Landroid/widget/LinearLayout;
+    Access flags: 0x4
+      = protected android.widget.LinearLayout d
+  - Field:        e Landroid/widget/RelativeLayout;
+    Access flags: 0x4
+      = protected android.widget.RelativeLayout e
+  - Field:        f Landroid/widget/LinearLayout;
+    Access flags: 0x4
+      = protected android.widget.LinearLayout f
+  - Field:        g Landroid/view/View;
+    Access flags: 0x4
+      = protected android.view.View g
+  - Field:        h Landroid/widget/TextView;
+    Access flags: 0x4
+      = protected android.widget.TextView h
+
+Methods (count = 5):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public a()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 16, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #33
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] aload_0 v0
+      [5] aload_0 v0
+      [6] invokevirtual #48
+        - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
+      [9] invokevirtual #47
+        - Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
+      [12] putfield #24
+        - Fieldref [com/wei/grabmoney/ui/a.a Ljava/lang/String;]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 15, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #34
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] aload_0 v0
+      [7] putfield #25
+        - Fieldref [com/wei/grabmoney/ui/a.b Landroid/content/Context;]
+      [10] aload_0 v0
+      [11] invokespecial #45
+        - Methodref [com/wei/grabmoney/ui/a.a ()V]
+      [14] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a()V
+    Access flags: 0x2
+      = private void a()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 131, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] aload_0 v0
+      [2] ldc #7
+        - Integer [2131034114]
+      [4] aconst_null
+      [5] invokestatic #36
+        - Methodref [android/view/View.inflate (Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
+      [8] checkcast #17
+        - Class [android/widget/LinearLayout]
+      [11] putfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [14] aload_0 v0
+      [15] aload_0 v0
+      [16] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [19] ldc #6
+        - Integer [2130968592]
+      [21] invokevirtual #42
+        - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+      [24] checkcast #17
+        - Class [android/widget/LinearLayout]
+      [27] putfield #26
+        - Fieldref [com/wei/grabmoney/ui/a.c Landroid/widget/LinearLayout;]
+      [30] aload_0 v0
+      [31] aload_0 v0
+      [32] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [35] ldc #5
+        - Integer [2130968591]
+      [37] invokevirtual #42
+        - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+      [40] checkcast #18
+        - Class [android/widget/RelativeLayout]
+      [43] putfield #28
+        - Fieldref [com/wei/grabmoney/ui/a.e Landroid/widget/RelativeLayout;]
+      [46] aload_0 v0
+      [47] aload_0 v0
+      [48] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [51] ldc #1
+        - Integer [2130968581]
+      [53] invokevirtual #42
+        - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+      [56] checkcast #17
+        - Class [android/widget/LinearLayout]
+      [59] putfield #27
+        - Fieldref [com/wei/grabmoney/ui/a.d Landroid/widget/LinearLayout;]
+      [62] aload_0 v0
+      [63] aload_0 v0
+      [64] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [67] ldc #2
+        - Integer [2130968584]
+      [69] invokevirtual #42
+        - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+      [72] checkcast #17
+        - Class [android/widget/LinearLayout]
+      [75] putfield #29
+        - Fieldref [com/wei/grabmoney/ui/a.f Landroid/widget/LinearLayout;]
+      [78] aload_0 v0
+      [79] aload_0 v0
+      [80] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [83] ldc #4
+        - Integer [2130968590]
+      [85] invokevirtual #42
+        - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+      [88] putfield #30
+        - Fieldref [com/wei/grabmoney/ui/a.g Landroid/view/View;]
+      [91] aload_0 v0
+      [92] getfield #30
+        - Fieldref [com/wei/grabmoney/ui/a.g Landroid/view/View;]
+      [95] iconst_0
+      [96] invokevirtual #39
+        - Methodref [android/view/View.setVisibility (I)V]
+      [99] aload_0 v0
+      [100] aload_0 v0
+      [101] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [104] ldc #3
+        - Integer [2130968589]
+      [106] invokevirtual #42
+        - Methodref [android/widget/LinearLayout.findViewById (I)Landroid/view/View;]
+      [109] checkcast #19
+        - Class [android/widget/TextView]
+      [112] putfield #31
+        - Fieldref [com/wei/grabmoney/ui/a.h Landroid/widget/TextView;]
+      [115] aload_0 v0
+      [116] getfield #30
+        - Fieldref [com/wei/grabmoney/ui/a.g Landroid/view/View;]
+      [119] new #21
+        - Class [com/wei/grabmoney/ui/a$1]
+      [122] dup
+      [123] aload_0 v0
+      [124] invokespecial #46
+        - Methodref [com/wei/grabmoney/ui/a$1.<init> (Lcom/wei/grabmoney/ui/a;)V]
+      [127] invokevirtual #38
+        - Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [130] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       setContentView(I)V
+    Access flags: 0x1
+      = public void setContentView(int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 39, locals = 4, stack = 4):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] aconst_null
+      [3] invokestatic #36
+        - Methodref [android/view/View.inflate (Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
+      [6] astore_2 v2
+      [7] new #16
+        - Class [android/view/ViewGroup$LayoutParams]
+      [10] dup
+      [11] iconst_m1
+      [12] iconst_m1
+      [13] invokespecial #40
+        - Methodref [android/view/ViewGroup$LayoutParams.<init> (II)V]
+      [16] astore_3 v3
+      [17] aload_2 v2
+      [18] aload_3 v3
+      [19] invokevirtual #37
+        - Methodref [android/view/View.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
+      [22] aload_0 v0
+      [23] getfield #27
+        - Fieldref [com/wei/grabmoney/ui/a.d Landroid/widget/LinearLayout;]
+      [26] aload_2 v2
+      [27] invokevirtual #41
+        - Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
+      [30] aload_0 v0
+      [31] aload_0 v0
+      [32] getfield #32
+        - Fieldref [com/wei/grabmoney/ui/a.i Landroid/widget/LinearLayout;]
+      [35] invokespecial #35
+        - Methodref [android/app/Activity.setContentView (Landroid/view/View;)V]
+      [38] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Ljava/lang/String;)V
+    Access flags: 0x1
+      = public void a(java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 17, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #31
+        - Fieldref [com/wei/grabmoney/ui/a.h Landroid/widget/TextView;]
+      [4] aload_1 v1
+      [5] invokevirtual #43
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [8] aload_0 v0
+      [9] getfield #31
+        - Fieldref [com/wei/grabmoney/ui/a.h Landroid/widget/TextView;]
+      [12] iconst_0
+      [13] invokevirtual #44
+        - Methodref [android/widget/TextView.setVisibility (I)V]
+      [16] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  - Inner classes attribute (count = 5)
+    - InnerClassesInfo:
+      Access flags:  0x0 = 
+      - Class [com/wei/grabmoney/ui/a$1]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      - Class [android/view/ViewGroup$LayoutParams]
+      - Class [android/view/ViewGroup]
+      - Utf8 [LayoutParams]
+    - InnerClassesInfo:
+      Access flags:  0x609 = public static interface 
+      - Class [android/view/View$OnClickListener]
+      - Class [android/view/View]
+      - Utf8 [OnClickListener]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      - Class [android/app/AlertDialog$Builder]
+      - Class [android/app/AlertDialog]
+      - Utf8 [Builder]
+    - InnerClassesInfo:
+      Access flags:  0x609 = public static interface 
+      - Class [android/content/DialogInterface$OnClickListener]
+      - Class [android/content/DialogInterface]
+      - Utf8 [OnClickListener]
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/ui/a$1
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x20
+    = class com.wei.grabmoney.ui.a$1 extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [android/view/View$OnClickListener]
+
+Constant Pool (count = 30):
+  - Class [android/view/View]
+  - Class [android/view/View$OnClickListener]
+  - Class [com/wei/grabmoney/ui/a]
+  - Class [com/wei/grabmoney/ui/a$1]
+  - Class [java/lang/Object]
+  - Fieldref [com/wei/grabmoney/ui/a$1.a Lcom/wei/grabmoney/ui/a;]
+  - Methodref [com/wei/grabmoney/ui/a.finish ()V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - NameAndType [<init> ()V]
+  - NameAndType [a ()V]
+  - NameAndType [a Lcom/wei/grabmoney/ui/a;]
+  - NameAndType [finish ()V]
+  - Utf8 [()V]
+  - Utf8 [(Landroid/view/View;)V]
+  - Utf8 [(Lcom/wei/grabmoney/ui/a;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [EnclosingMethod]
+  - Utf8 [InnerClasses]
+  - Utf8 [Lcom/wei/grabmoney/ui/a;]
+  - Utf8 [OnClickListener]
+  - Utf8 [a]
+  - Utf8 [android/view/View]
+  - Utf8 [android/view/View$OnClickListener]
+  - Utf8 [com/wei/grabmoney/ui/a]
+  - Utf8 [com/wei/grabmoney/ui/a$1]
+  - Utf8 [finish]
+  - Utf8 [java/lang/Object]
+  - Utf8 [onClick]
+
+Fields (count = 1):
+  - Field:        a Lcom/wei/grabmoney/ui/a;
+    Access flags: 0x1010
+      = final synthetic com.wei.grabmoney.ui.a a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/wei/grabmoney/ui/a;)V
+    Access flags: 0x0
+      = a$1(com.wei.grabmoney.ui.a)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #6
+        - Fieldref [com/wei/grabmoney/ui/a$1.a Lcom/wei/grabmoney/ui/a;]
+      [5] aload_0 v0
+      [6] invokespecial #8
+        - Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onClick(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void onClick(android.view.View)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 8, locals = 2, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #6
+        - Fieldref [com/wei/grabmoney/ui/a$1.a Lcom/wei/grabmoney/ui/a;]
+      [4] invokevirtual #7
+        - Methodref [com/wei/grabmoney/ui/a.finish ()V]
+      [7] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 2):
+  - Enclosing method attribute:
+    - Class [com/wei/grabmoney/ui/a]
+    - NameAndType [a ()V]
+  - Inner classes attribute (count = 2)
+    - InnerClassesInfo:
+      Access flags:  0x0 = 
+      - Class [com/wei/grabmoney/ui/a$1]
+    - InnerClassesInfo:
+      Access flags:  0x609 = public static interface 
+      - Class [android/view/View$OnClickListener]
+      - Class [android/view/View]
+      - Utf8 [OnClickListener]
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/ui/EmptyActivity
+  Superclass:    com/wei/grabmoney/ui/a
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x21
+    = public class com.wei.grabmoney.ui.EmptyActivity extends com.wei.grabmoney.ui.a
+
+Interfaces (count = 0):
+
+Constant Pool (count = 43):
+  - Integer [2131034112]
+  - String [--- onCreate ---]
+  - Class [android/os/Bundle]
+  - Class [com/wei/grabmoney/a/a]
+  - Class [com/wei/grabmoney/ui/EmptyActivity]
+  - Class [com/wei/grabmoney/ui/MainActivity]
+  - Class [com/wei/grabmoney/ui/a]
+  - Fieldref [com/wei/grabmoney/ui/EmptyActivity.a Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+  - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/ui/EmptyActivity.finish ()V]
+  - Methodref [com/wei/grabmoney/ui/EmptyActivity.setContentView (I)V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.finish ()V]
+  - Methodref [com/wei/grabmoney/ui/a.<init> ()V]
+  - Methodref [com/wei/grabmoney/ui/a.onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [<init> ()V]
+  - NameAndType [a (Ljava/lang/String;Ljava/lang/String;)V]
+  - NameAndType [a Ljava/lang/String;]
+  - NameAndType [finish ()V]
+  - NameAndType [i Lcom/wei/grabmoney/ui/MainActivity;]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [setContentView (I)V]
+  - Utf8 [()V]
+  - Utf8 [(I)V]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  - Utf8 [--- onCreate ---]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Lcom/wei/grabmoney/ui/MainActivity;]
+  - Utf8 [Ljava/lang/String;]
+  - Utf8 [StackMapTable]
+  - Utf8 [a]
+  - Utf8 [android/os/Bundle]
+  - Utf8 [com/wei/grabmoney/a/a]
+  - Utf8 [com/wei/grabmoney/ui/EmptyActivity]
+  - Utf8 [com/wei/grabmoney/ui/MainActivity]
+  - Utf8 [com/wei/grabmoney/ui/a]
+  - Utf8 [finish]
+  - Utf8 [i]
+  - Utf8 [onCreate]
+  - Utf8 [setContentView]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public EmptyActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #14
+        - Methodref [com/wei/grabmoney/ui/a.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 37, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #15
+        - Methodref [com/wei/grabmoney/ui/a.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        - Integer [2131034112]
+      [8] invokevirtual #12
+        - Methodref [com/wei/grabmoney/ui/EmptyActivity.setContentView (I)V]
+      [11] aload_0 v0
+      [12] getfield #8
+        - Fieldref [com/wei/grabmoney/ui/EmptyActivity.a Ljava/lang/String;]
+      [15] ldc #2
+        - String [--- onCreate ---]
+      [17] invokestatic #10
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [20] aload_0 v0
+      [21] invokevirtual #11
+        - Methodref [com/wei/grabmoney/ui/EmptyActivity.finish ()V]
+      [24] getstatic #9
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+      [27] ifnull +9 (target=36)
+      [30] getstatic #9
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+      [33] invokevirtual #13
+        - Methodref [com/wei/grabmoney/ui/MainActivity.finish ()V]
+      [36] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 1):
+        - [36] Var: -2, Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/ui/MainActivity
+  Superclass:    com/wei/grabmoney/ui/a
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x21
+    = public class com.wei.grabmoney.ui.MainActivity extends com.wei.grabmoney.ui.a
+
+Interfaces (count = 3):
+  - Class [android/text/TextWatcher]
+  - Class [android/widget/CompoundButton$OnCheckedChangeListener]
+  - Class [android/widget/SeekBar$OnSeekBarChangeListener]
+
+Constant Pool (count = 411):
+  - Integer [-16711936]
+  - Integer [-7829368]
+  - Integer [268435456]
+  - Integer [2130968576]
+  - Integer [2130968578]
+  - Integer [2130968579]
+  - Integer [2130968580]
+  - Integer [2130968582]
+  - Integer [2130968583]
+  - Integer [2130968586]
+  - Integer [2130968587]
+  - Integer [2130968588]
+  - Integer [2130968593]
+  - Integer [2130968594]
+  - Integer [2130968596]
+  - Integer [2131034113]
+  - Integer [2131099648]
+  - Float [100.0]
+  - Float [1000.0]
+  - Float [2000.0]
+  - String []
+  - String [ 秒 ]
+  - String [--- onStartTrackingTouch ---]
+  - String [--- onStopTrackingTouch ---]
+  - String [.service.GrabMoneyService]
+  - String [/]
+  - String [MainActivity]
+  - String [accessibility_enabled]
+  - String [alarm]
+  - String [android.settings.ACCESSIBILITY_SETTINGS]
+  - String [delay_time]
+  - String [enabled_accessibility_services]
+  - String [fastest_checked]
+  - String [mark_work]
+  - String [nothing]
+  - String [vibrate]
+  - String [voice]
+  - String [voice_vibrate]
+  - String [停止服务]
+  - String [延迟了：]
+  - String [开启服务]
+  - String [服务未启动]
+  - String [正在抢红包......]
+  - String [毫秒]
+  - String [自动抢红包]
+  - Class [android/content/Context]
+  - Class [android/content/Intent]
+  - Class [android/provider/Settings]
+  - Class [android/provider/Settings$Secure]
+  - Class [android/provider/Settings$SettingNotFoundException]
+  - Class [android/text/Editable]
+  - Class [android/text/TextUtils]
+  - Class [android/text/TextUtils$SimpleStringSplitter]
+  - Class [android/text/TextWatcher]
+  - Class [android/view/MenuInflater]
+  - Class [android/view/MenuItem]
+  - Class [android/view/View]
+  - Class [android/widget/Button]
+  - Class [android/widget/CompoundButton]
+  - Class [android/widget/CompoundButton$OnCheckedChangeListener]
+  - Class [android/widget/EditText]
+  - Class [android/widget/RadioButton]
+  - Class [android/widget/SeekBar]
+  - Class [android/widget/SeekBar$OnSeekBarChangeListener]
+  - Class [android/widget/TextView]
+  - Class [com/wei/grabmoney/a/a]
+  - Class [com/wei/grabmoney/a/b]
+  - Class [com/wei/grabmoney/ui/MainActivity]
+  - Class [com/wei/grabmoney/ui/a]
+  - Class [java/lang/Exception]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.b Landroid/content/Context;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.g Landroid/view/View;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.j Ljava/lang/String;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.k Landroid/widget/TextView;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.l Landroid/widget/TextView;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.m Landroid/widget/EditText;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.n Landroid/content/Intent;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.p Landroid/widget/SeekBar;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.q F]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.r Landroid/widget/Button;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.s Landroid/widget/RadioButton;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.t Landroid/widget/RadioButton;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.u Landroid/widget/RadioButton;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.v Landroid/widget/RadioButton;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.w Landroid/widget/RadioButton;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.x Landroid/widget/RadioButton;]
+  - Fieldref [com/wei/grabmoney/ui/MainActivity.y I]
+  - Methodref [android/content/Context.getContentResolver ()Landroid/content/ContentResolver;]
+  - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+  - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
+  - Methodref [android/provider/Settings$Secure.getInt (Landroid/content/ContentResolver;Ljava/lang/String;)I]
+  - Methodref [android/provider/Settings$Secure.getString (Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [android/text/TextUtils.isEmpty (Ljava/lang/CharSequence;)Z]
+  - Methodref [android/text/TextUtils$SimpleStringSplitter.<init> (C)V]
+  - Methodref [android/text/TextUtils$SimpleStringSplitter.hasNext ()Z]
+  - Methodref [android/text/TextUtils$SimpleStringSplitter.next ()Ljava/lang/String;]
+  - Methodref [android/text/TextUtils$SimpleStringSplitter.setString (Ljava/lang/String;)V]
+  - Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+  - Methodref [android/view/View.setVisibility (I)V]
+  - Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [android/widget/CompoundButton.getId ()I]
+  - Methodref [android/widget/EditText.addTextChangedListener (Landroid/text/TextWatcher;)V]
+  - Methodref [android/widget/EditText.setSelection (I)V]
+  - Methodref [android/widget/EditText.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [android/widget/RadioButton.setChecked (Z)V]
+  - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+  - Methodref [android/widget/SeekBar.setOnSeekBarChangeListener (Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
+  - Methodref [android/widget/SeekBar.setProgress (I)V]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [android/widget/TextView.setTextColor (I)V]
+  - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/a/a.b (Ljava/lang/String;Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/a/b.<init> (Landroid/content/Context;)V]
+  - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;F)V]
+  - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;Z)V]
+  - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;F)F]
+  - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.a ()V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.a (Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.b ()V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.b (Ljava/lang/String;)Z]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.c ()V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.c (Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.d (Ljava/lang/String;)V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.getApplicationContext ()Landroid/content/Context;]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.getPackageName ()Ljava/lang/String;]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.setContentView (I)V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.startActivity (Landroid/content/Intent;)V]
+  - Methodref [com/wei/grabmoney/ui/MainActivity.stopService (Landroid/content/Intent;)Z]
+  - Methodref [com/wei/grabmoney/ui/a.<init> ()V]
+  - Methodref [com/wei/grabmoney/ui/a.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [com/wei/grabmoney/ui/a.onDestroy ()V]
+  - Methodref [com/wei/grabmoney/ui/a.onOptionsItemSelected (Landroid/view/MenuItem;)Z]
+  - Methodref [com/wei/grabmoney/ui/a.onResume ()V]
+  - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  - Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
+  - Methodref [java/lang/String.length ()I]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (F)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - InterfaceMethodref [android/view/MenuItem.getItemId ()I]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (C)V]
+  - NameAndType [<init> (Landroid/content/Context;)V]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [a ()V]
+  - NameAndType [a (Ljava/lang/String;)V]
+  - NameAndType [a (Ljava/lang/String;F)V]
+  - NameAndType [a (Ljava/lang/String;Ljava/lang/String;)V]
+  - NameAndType [a (Ljava/lang/String;Z)V]
+  - NameAndType [addTextChangedListener (Landroid/text/TextWatcher;)V]
+  - NameAndType [append (F)Ljava/lang/StringBuilder;]
+  - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - NameAndType [b ()V]
+  - NameAndType [b (Ljava/lang/String;)Z]
+  - NameAndType [b (Ljava/lang/String;F)F]
+  - NameAndType [b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [b (Ljava/lang/String;Ljava/lang/String;)V]
+  - NameAndType [b Landroid/content/Context;]
+  - NameAndType [c ()V]
+  - NameAndType [c (Ljava/lang/String;)V]
+  - NameAndType [d (Ljava/lang/String;)V]
+  - NameAndType [equals (Ljava/lang/Object;)Z]
+  - NameAndType [equalsIgnoreCase (Ljava/lang/String;)Z]
+  - NameAndType [findViewById (I)Landroid/view/View;]
+  - NameAndType [g Landroid/view/View;]
+  - NameAndType [getApplicationContext ()Landroid/content/Context;]
+  - NameAndType [getContentResolver ()Landroid/content/ContentResolver;]
+  - NameAndType [getId ()I]
+  - NameAndType [getInt (Landroid/content/ContentResolver;Ljava/lang/String;)I]
+  - NameAndType [getItemId ()I]
+  - NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
+  - NameAndType [getPackageName ()Ljava/lang/String;]
+  - NameAndType [getString (Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [hasNext ()Z]
+  - NameAndType [i Lcom/wei/grabmoney/ui/MainActivity;]
+  - NameAndType [inflate (ILandroid/view/Menu;)V]
+  - NameAndType [isEmpty (Ljava/lang/CharSequence;)Z]
+  - NameAndType [j Ljava/lang/String;]
+  - NameAndType [k Landroid/widget/TextView;]
+  - NameAndType [l Landroid/widget/TextView;]
+  - NameAndType [length ()I]
+  - NameAndType [m Landroid/widget/EditText;]
+  - NameAndType [n Landroid/content/Intent;]
+  - NameAndType [next ()Ljava/lang/String;]
+  - NameAndType [o Lcom/wei/grabmoney/a/b;]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [onDestroy ()V]
+  - NameAndType [onOptionsItemSelected (Landroid/view/MenuItem;)Z]
+  - NameAndType [onResume ()V]
+  - NameAndType [p Landroid/widget/SeekBar;]
+  - NameAndType [q F]
+  - NameAndType [r Landroid/widget/Button;]
+  - NameAndType [s Landroid/widget/RadioButton;]
+  - NameAndType [setChecked (Z)V]
+  - NameAndType [setContentView (I)V]
+  - NameAndType [setFlags (I)Landroid/content/Intent;]
+  - NameAndType [setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+  - NameAndType [setOnSeekBarChangeListener (Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
+  - NameAndType [setProgress (I)V]
+  - NameAndType [setSelection (I)V]
+  - NameAndType [setString (Ljava/lang/String;)V]
+  - NameAndType [setText (Ljava/lang/CharSequence;)V]
+  - NameAndType [setTextColor (I)V]
+  - NameAndType [setVisibility (I)V]
+  - NameAndType [startActivity (Landroid/content/Intent;)V]
+  - NameAndType [stopService (Landroid/content/Intent;)Z]
+  - NameAndType [t Landroid/widget/RadioButton;]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - NameAndType [u Landroid/widget/RadioButton;]
+  - NameAndType [v Landroid/widget/RadioButton;]
+  - NameAndType [w Landroid/widget/RadioButton;]
+  - NameAndType [x Landroid/widget/RadioButton;]
+  - NameAndType [y I]
+  - Utf8 []
+  - Utf8 [ 秒 ]
+  - Utf8 [()I]
+  - Utf8 [()Landroid/content/ContentResolver;]
+  - Utf8 [()Landroid/content/Context;]
+  - Utf8 [()Landroid/view/MenuInflater;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(C)V]
+  - Utf8 [(F)Ljava/lang/StringBuilder;]
+  - Utf8 [(I)Landroid/content/Intent;]
+  - Utf8 [(I)Landroid/view/View;]
+  - Utf8 [(I)V]
+  - Utf8 [(ILandroid/view/Menu;)V]
+  - Utf8 [(Landroid/content/ContentResolver;Ljava/lang/String;)I]
+  - Utf8 [(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/content/Intent;)V]
+  - Utf8 [(Landroid/content/Intent;)Z]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [(Landroid/text/Editable;)V]
+  - Utf8 [(Landroid/text/TextWatcher;)V]
+  - Utf8 [(Landroid/view/Menu;)Z]
+  - Utf8 [(Landroid/view/MenuItem;)Z]
+  - Utf8 [(Landroid/view/View;)V]
+  - Utf8 [(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+  - Utf8 [(Landroid/widget/CompoundButton;Z)V]
+  - Utf8 [(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
+  - Utf8 [(Landroid/widget/SeekBar;)V]
+  - Utf8 [(Landroid/widget/SeekBar;IZ)V]
+  - Utf8 [(Ljava/lang/CharSequence;)V]
+  - Utf8 [(Ljava/lang/CharSequence;)Z]
+  - Utf8 [(Ljava/lang/CharSequence;III)V]
+  - Utf8 [(Ljava/lang/Object;)Z]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;)Z]
+  - Utf8 [(Ljava/lang/String;F)F]
+  - Utf8 [(Ljava/lang/String;F)V]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;Z)V]
+  - Utf8 [(Z)V]
+  - Utf8 [--- onStartTrackingTouch ---]
+  - Utf8 [--- onStopTrackingTouch ---]
+  - Utf8 [.service.GrabMoneyService]
+  - Utf8 [/]
+  - Utf8 [<clinit>]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [ConstantValue]
+  - Utf8 [F]
+  - Utf8 [I]
+  - Utf8 [InnerClasses]
+  - Utf8 [Landroid/content/Context;]
+  - Utf8 [Landroid/content/Intent;]
+  - Utf8 [Landroid/view/View;]
+  - Utf8 [Landroid/widget/Button;]
+  - Utf8 [Landroid/widget/EditText;]
+  - Utf8 [Landroid/widget/RadioButton;]
+  - Utf8 [Landroid/widget/SeekBar;]
+  - Utf8 [Landroid/widget/TextView;]
+  - Utf8 [Lcom/wei/grabmoney/a/b;]
+  - Utf8 [Lcom/wei/grabmoney/ui/MainActivity;]
+  - Utf8 [Ljava/lang/String;]
+  - Utf8 [MainActivity]
+  - Utf8 [OnCheckedChangeListener]
+  - Utf8 [OnSeekBarChangeListener]
+  - Utf8 [Secure]
+  - Utf8 [SettingNotFoundException]
+  - Utf8 [SimpleStringSplitter]
+  - Utf8 [StackMapTable]
+  - Utf8 [a]
+  - Utf8 [accessibility_enabled]
+  - Utf8 [addTextChangedListener]
+  - Utf8 [afterTextChanged]
+  - Utf8 [alarm]
+  - Utf8 [android.settings.ACCESSIBILITY_SETTINGS]
+  - Utf8 [android/content/Context]
+  - Utf8 [android/content/Intent]
+  - Utf8 [android/provider/Settings]
+  - Utf8 [android/provider/Settings$Secure]
+  - Utf8 [android/provider/Settings$SettingNotFoundException]
+  - Utf8 [android/text/Editable]
+  - Utf8 [android/text/TextUtils]
+  - Utf8 [android/text/TextUtils$SimpleStringSplitter]
+  - Utf8 [android/text/TextWatcher]
+  - Utf8 [android/view/MenuInflater]
+  - Utf8 [android/view/MenuItem]
+  - Utf8 [android/view/View]
+  - Utf8 [android/widget/Button]
+  - Utf8 [android/widget/CompoundButton]
+  - Utf8 [android/widget/CompoundButton$OnCheckedChangeListener]
+  - Utf8 [android/widget/EditText]
+  - Utf8 [android/widget/RadioButton]
+  - Utf8 [android/widget/SeekBar]
+  - Utf8 [android/widget/SeekBar$OnSeekBarChangeListener]
+  - Utf8 [android/widget/TextView]
+  - Utf8 [append]
+  - Utf8 [b]
+  - Utf8 [beforeTextChanged]
+  - Utf8 [c]
+  - Utf8 [com/wei/grabmoney/a/a]
+  - Utf8 [com/wei/grabmoney/a/b]
+  - Utf8 [com/wei/grabmoney/ui/MainActivity]
+  - Utf8 [com/wei/grabmoney/ui/a]
+  - Utf8 [d]
+  - Utf8 [delay_time]
+  - Utf8 [enabled_accessibility_services]
+  - Utf8 [equals]
+  - Utf8 [equalsIgnoreCase]
+  - Utf8 [fastest_checked]
+  - Utf8 [findViewById]
+  - Utf8 [g]
+  - Utf8 [getApplicationContext]
+  - Utf8 [getContentResolver]
+  - Utf8 [getId]
+  - Utf8 [getInt]
+  - Utf8 [getItemId]
+  - Utf8 [getMenuInflater]
+  - Utf8 [getPackageName]
+  - Utf8 [getString]
+  - Utf8 [hasNext]
+  - Utf8 [i]
+  - Utf8 [inflate]
+  - Utf8 [isEmpty]
+  - Utf8 [j]
+  - Utf8 [java/lang/Exception]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [k]
+  - Utf8 [l]
+  - Utf8 [length]
+  - Utf8 [m]
+  - Utf8 [mark_work]
+  - Utf8 [n]
+  - Utf8 [next]
+  - Utf8 [nothing]
+  - Utf8 [o]
+  - Utf8 [onCheckedChanged]
+  - Utf8 [onCreate]
+  - Utf8 [onCreateOptionsMenu]
+  - Utf8 [onDestroy]
+  - Utf8 [onOptionsItemSelected]
+  - Utf8 [onProgressChanged]
+  - Utf8 [onResume]
+  - Utf8 [onStartTrackingTouch]
+  - Utf8 [onStopTrackingTouch]
+  - Utf8 [onTextChanged]
+  - Utf8 [p]
+  - Utf8 [q]
+  - Utf8 [r]
+  - Utf8 [s]
+  - Utf8 [setChecked]
+  - Utf8 [setContentView]
+  - Utf8 [setFlags]
+  - Utf8 [setOnCheckedChangeListener]
+  - Utf8 [setOnSeekBarChangeListener]
+  - Utf8 [setProgress]
+  - Utf8 [setSelection]
+  - Utf8 [setString]
+  - Utf8 [setText]
+  - Utf8 [setTextColor]
+  - Utf8 [setVisibility]
+  - Utf8 [startActivity]
+  - Utf8 [startService]
+  - Utf8 [stopService]
+  - Utf8 [t]
+  - Utf8 [toString]
+  - Utf8 [u]
+  - Utf8 [v]
+  - Utf8 [vibrate]
+  - Utf8 [voice]
+  - Utf8 [voice_vibrate]
+  - Utf8 [w]
+  - Utf8 [x]
+  - Utf8 [y]
+  - Utf8 [停止服务]
+  - Utf8 [延迟了：]
+  - Utf8 [开启服务]
+  - Utf8 [服务未启动]
+  - Utf8 [正在抢红包......]
+  - Utf8 [毫秒]
+  - Utf8 [自动抢红包]
+
+Fields (count = 17):
+  - Field:        j Ljava/lang/String;
+    Access flags: 0x12
+      = private final java.lang.String j
+    Class member attributes (count = 1):
+    - Constant value attribute:
+    - String [MainActivity]
+  - Field:        k Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView k
+  - Field:        l Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView l
+  - Field:        m Landroid/widget/EditText;
+    Access flags: 0x2
+      = private android.widget.EditText m
+  - Field:        n Landroid/content/Intent;
+    Access flags: 0x12
+      = private final android.content.Intent n
+  - Field:        o Lcom/wei/grabmoney/a/b;
+    Access flags: 0x2
+      = private com.wei.grabmoney.a.b o
+  - Field:        p Landroid/widget/SeekBar;
+    Access flags: 0x2
+      = private android.widget.SeekBar p
+  - Field:        q F
+    Access flags: 0x12
+      = private final float q
+    Class member attributes (count = 1):
+    - Constant value attribute:
+    - Float [2000.0]
+  - Field:        r Landroid/widget/Button;
+    Access flags: 0x2
+      = private android.widget.Button r
+  - Field:        s Landroid/widget/RadioButton;
+    Access flags: 0x2
+      = private android.widget.RadioButton s
+  - Field:        t Landroid/widget/RadioButton;
+    Access flags: 0x2
+      = private android.widget.RadioButton t
+  - Field:        u Landroid/widget/RadioButton;
+    Access flags: 0x2
+      = private android.widget.RadioButton u
+  - Field:        v Landroid/widget/RadioButton;
+    Access flags: 0x2
+      = private android.widget.RadioButton v
+  - Field:        w Landroid/widget/RadioButton;
+    Access flags: 0x2
+      = private android.widget.RadioButton w
+  - Field:        x Landroid/widget/RadioButton;
+    Access flags: 0x2
+      = private android.widget.RadioButton x
+  - Field:        y I
+    Access flags: 0x2
+      = private int y
+  - Field:        i Lcom/wei/grabmoney/ui/MainActivity;
+    Access flags: 0x9
+      = public static com.wei.grabmoney.ui.MainActivity i
+
+Methods (count = 22):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 35, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #138
+        - Methodref [com/wei/grabmoney/ui/a.<init> ()V]
+      [4] aload_0 v0
+      [5] ldc #27
+        - String [MainActivity]
+      [7] putfield #77
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.j Ljava/lang/String;]
+      [10] aload_0 v0
+      [11] new #47
+        - Class [android/content/Intent]
+      [14] dup
+      [15] ldc #30
+        - String [android.settings.ACCESSIBILITY_SETTINGS]
+      [17] invokespecial #94
+        - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+      [20] putfield #81
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.n Landroid/content/Intent;]
+      [23] aload_0 v0
+      [24] ldc #20
+        - Float [2000.0]
+      [26] putfield #84
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.q F]
+      [29] aload_0 v0
+      [30] aconst_null
+      [31] putfield #85
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.r Landroid/widget/Button;]
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 18, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #139
+        - Methodref [com/wei/grabmoney/ui/a.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] invokespecial #124
+        - Methodref [com/wei/grabmoney/ui/MainActivity.a ()V]
+      [9] aload_0 v0
+      [10] invokespecial #126
+        - Methodref [com/wei/grabmoney/ui/MainActivity.b ()V]
+      [13] aload_0 v0
+      [14] putstatic #76
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+      [17] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a()V
+    Access flags: 0x2
+      = private void a()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 221, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] ldc #16
+        - Integer [2131034113]
+      [3] invokevirtual #135
+        - Methodref [com/wei/grabmoney/ui/MainActivity.setContentView (I)V]
+      [6] aload_0 v0
+      [7] getfield #75
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.g Landroid/view/View;]
+      [10] bipush 8
+      [12] invokevirtual #104
+        - Methodref [android/view/View.setVisibility (I)V]
+      [15] aload_0 v0
+      [16] ldc #45
+        - String [自动抢红包]
+      [18] invokevirtual #125
+        - Methodref [com/wei/grabmoney/ui/MainActivity.a (Ljava/lang/String;)V]
+      [21] aload_0 v0
+      [22] aload_0 v0
+      [23] ldc #13
+        - Integer [2130968593]
+      [25] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [28] checkcast #65
+        - Class [android/widget/TextView]
+      [31] putfield #78
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.k Landroid/widget/TextView;]
+      [34] aload_0 v0
+      [35] aload_0 v0
+      [36] ldc #8
+        - Integer [2130968582]
+      [38] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [41] checkcast #61
+        - Class [android/widget/EditText]
+      [44] putfield #80
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.m Landroid/widget/EditText;]
+      [47] aload_0 v0
+      [48] aload_0 v0
+      [49] ldc #9
+        - Integer [2130968583]
+      [51] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [54] checkcast #63
+        - Class [android/widget/SeekBar]
+      [57] putfield #83
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.p Landroid/widget/SeekBar;]
+      [60] aload_0 v0
+      [61] aload_0 v0
+      [62] ldc #6
+        - Integer [2130968579]
+      [64] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [67] checkcast #62
+        - Class [android/widget/RadioButton]
+      [70] putfield #86
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.s Landroid/widget/RadioButton;]
+      [73] aload_0 v0
+      [74] aload_0 v0
+      [75] ldc #7
+        - Integer [2130968580]
+      [77] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [80] checkcast #62
+        - Class [android/widget/RadioButton]
+      [83] putfield #87
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.t Landroid/widget/RadioButton;]
+      [86] aload_0 v0
+      [87] getfield #86
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.s Landroid/widget/RadioButton;]
+      [90] aload_0 v0
+      [91] invokevirtual #111
+        - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [94] aload_0 v0
+      [95] getfield #87
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.t Landroid/widget/RadioButton;]
+      [98] aload_0 v0
+      [99] invokevirtual #111
+        - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [102] aload_0 v0
+      [103] getfield #83
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.p Landroid/widget/SeekBar;]
+      [106] aload_0 v0
+      [107] invokevirtual #112
+        - Methodref [android/widget/SeekBar.setOnSeekBarChangeListener (Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
+      [110] aload_0 v0
+      [111] aload_0 v0
+      [112] ldc #14
+        - Integer [2130968594]
+      [114] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [117] checkcast #65
+        - Class [android/widget/TextView]
+      [120] putfield #79
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.l Landroid/widget/TextView;]
+      [123] aload_0 v0
+      [124] aload_0 v0
+      [125] ldc #5
+        - Integer [2130968578]
+      [127] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [130] checkcast #58
+        - Class [android/widget/Button]
+      [133] putfield #85
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.r Landroid/widget/Button;]
+      [136] aload_0 v0
+      [137] aload_0 v0
+      [138] ldc #15
+        - Integer [2130968596]
+      [140] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [143] checkcast #62
+        - Class [android/widget/RadioButton]
+      [146] putfield #88
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.u Landroid/widget/RadioButton;]
+      [149] aload_0 v0
+      [150] aload_0 v0
+      [151] ldc #12
+        - Integer [2130968588]
+      [153] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [156] checkcast #62
+        - Class [android/widget/RadioButton]
+      [159] putfield #89
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.v Landroid/widget/RadioButton;]
+      [162] aload_0 v0
+      [163] aload_0 v0
+      [164] ldc #11
+        - Integer [2130968587]
+      [166] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [169] checkcast #62
+        - Class [android/widget/RadioButton]
+      [172] putfield #90
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.w Landroid/widget/RadioButton;]
+      [175] aload_0 v0
+      [176] aload_0 v0
+      [177] ldc #10
+        - Integer [2130968586]
+      [179] invokevirtual #131
+        - Methodref [com/wei/grabmoney/ui/MainActivity.findViewById (I)Landroid/view/View;]
+      [182] checkcast #62
+        - Class [android/widget/RadioButton]
+      [185] putfield #91
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.x Landroid/widget/RadioButton;]
+      [188] aload_0 v0
+      [189] getfield #88
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.u Landroid/widget/RadioButton;]
+      [192] aload_0 v0
+      [193] invokevirtual #111
+        - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [196] aload_0 v0
+      [197] getfield #89
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.v Landroid/widget/RadioButton;]
+      [200] aload_0 v0
+      [201] invokevirtual #111
+        - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [204] aload_0 v0
+      [205] getfield #90
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.w Landroid/widget/RadioButton;]
+      [208] aload_0 v0
+      [209] invokevirtual #111
+        - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [212] aload_0 v0
+      [213] getfield #91
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.x Landroid/widget/RadioButton;]
+      [216] aload_0 v0
+      [217] invokevirtual #111
+        - Methodref [android/widget/RadioButton.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [220] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       b()V
+    Access flags: 0x2
+      = private void b()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 206, locals = 5, stack = 4):
+      [0] aload_0 v0
+      [1] new #67
+        - Class [com/wei/grabmoney/a/b]
+      [4] dup
+      [5] aload_0 v0
+      [6] getfield #74
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.b Landroid/content/Context;]
+      [9] invokespecial #118
+        - Methodref [com/wei/grabmoney/a/b.<init> (Landroid/content/Context;)V]
+      [12] putfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [15] aload_0 v0
+      [16] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [19] ldc #34
+        - String [mark_work]
+      [21] ldc #21
+        - String []
+      [23] invokevirtual #123
+        - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [26] astore_1 v1
+      [27] aload_0 v0
+      [28] getfield #80
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.m Landroid/widget/EditText;]
+      [31] aload_1 v1
+      [32] invokevirtual #109
+        - Methodref [android/widget/EditText.setText (Ljava/lang/CharSequence;)V]
+      [35] aload_0 v0
+      [36] getfield #80
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.m Landroid/widget/EditText;]
+      [39] aload_1 v1
+      [40] invokevirtual #146
+        - Methodref [java/lang/String.length ()I]
+      [43] invokevirtual #108
+        - Methodref [android/widget/EditText.setSelection (I)V]
+      [46] aload_0 v0
+      [47] getfield #80
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.m Landroid/widget/EditText;]
+      [50] aload_0 v0
+      [51] invokevirtual #107
+        - Methodref [android/widget/EditText.addTextChangedListener (Landroid/text/TextWatcher;)V]
+      [54] aload_0 v0
+      [55] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [58] ldc #31
+        - String [delay_time]
+      [60] fconst_0
+      [61] invokevirtual #122
+        - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;F)F]
+      [64] fstore_2 v2
+      [65] fload_2 v2
+      [66] ldc #20
+        - Float [2000.0]
+      [68] fdiv
+      [69] fstore_3 v3
+      [70] aload_0 v0
+      [71] getfield #83
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.p Landroid/widget/SeekBar;]
+      [74] fload_3 v3
+      [75] ldc #18
+        - Float [100.0]
+      [77] fmul
+      [78] f2i
+      [79] invokevirtual #113
+        - Methodref [android/widget/SeekBar.setProgress (I)V]
+      [82] aload_0 v0
+      [83] getfield #79
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.l Landroid/widget/TextView;]
+      [86] new #73
+        - Class [java/lang/StringBuilder]
+      [89] dup
+      [90] invokespecial #147
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [93] fload_2 v2
+      [94] ldc #19
+        - Float [1000.0]
+      [96] fdiv
+      [97] invokevirtual #148
+        - Methodref [java/lang/StringBuilder.append (F)Ljava/lang/StringBuilder;]
+      [100] ldc #22
+        - String [ 秒 ]
+      [102] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [105] invokevirtual #150
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [108] invokevirtual #114
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [111] aload_0 v0
+      [112] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [115] ldc #29
+        - String [alarm]
+      [117] ldc #35
+        - String [nothing]
+      [119] invokevirtual #123
+        - Methodref [com/wei/grabmoney/a/b.b (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [122] astore v4
+      [124] aload v4
+      [126] ldc #35
+        - String [nothing]
+      [128] invokevirtual #144
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [131] ifeq +14 (target=145)
+      [134] aload_0 v0
+      [135] getfield #91
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.x Landroid/widget/RadioButton;]
+      [138] iconst_1
+      [139] invokevirtual #110
+        - Methodref [android/widget/RadioButton.setChecked (Z)V]
+      [142] goto +63 (target=205)
+      [145] aload v4
+      [147] ldc #38
+        - String [voice_vibrate]
+      [149] invokevirtual #144
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [152] ifeq +14 (target=166)
+      [155] aload_0 v0
+      [156] getfield #88
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.u Landroid/widget/RadioButton;]
+      [159] iconst_1
+      [160] invokevirtual #110
+        - Methodref [android/widget/RadioButton.setChecked (Z)V]
+      [163] goto +42 (target=205)
+      [166] aload v4
+      [168] ldc #37
+        - String [voice]
+      [170] invokevirtual #144
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [173] ifeq +14 (target=187)
+      [176] aload_0 v0
+      [177] getfield #89
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.v Landroid/widget/RadioButton;]
+      [180] iconst_1
+      [181] invokevirtual #110
+        - Methodref [android/widget/RadioButton.setChecked (Z)V]
+      [184] goto +21 (target=205)
+      [187] aload v4
+      [189] ldc #36
+        - String [vibrate]
+      [191] invokevirtual #144
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [194] ifeq +11 (target=205)
+      [197] aload_0 v0
+      [198] getfield #90
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.w Landroid/widget/RadioButton;]
+      [201] iconst_1
+      [202] invokevirtual #110
+        - Methodref [android/widget/RadioButton.setChecked (Z)V]
+      [205] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 4):
+        - [145] Var: [a:com/wei/grabmoney/ui/MainActivity][T][T][T][a:java/lang/String], Stack: 
+        - [166] Var: ..., Stack: (empty)
+        - [187] Var: ..., Stack: (empty)
+        - [205] Var: , Stack: 
+  - Method:       onResume()V
+    Access flags: 0x4
+      = protected void onResume()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #142
+        - Methodref [com/wei/grabmoney/ui/a.onResume ()V]
+      [4] aload_0 v0
+      [5] invokespecial #128
+        - Methodref [com/wei/grabmoney/ui/MainActivity.c ()V]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       c()V
+    Access flags: 0x2
+      = private void c()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 101, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] new #73
+        - Class [java/lang/StringBuilder]
+      [4] dup
+      [5] invokespecial #147
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [8] aload_0 v0
+      [9] invokevirtual #134
+        - Methodref [com/wei/grabmoney/ui/MainActivity.getPackageName ()Ljava/lang/String;]
+      [12] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [15] ldc #26
+        - String [/]
+      [17] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [20] aload_0 v0
+      [21] invokevirtual #134
+        - Methodref [com/wei/grabmoney/ui/MainActivity.getPackageName ()Ljava/lang/String;]
+      [24] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [27] ldc #25
+        - String [.service.GrabMoneyService]
+      [29] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [32] invokevirtual #150
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [35] invokespecial #127
+        - Methodref [com/wei/grabmoney/ui/MainActivity.b (Ljava/lang/String;)Z]
+      [38] istore_1 v1
+      [39] aload_0 v0
+      [40] getfield #78
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.k Landroid/widget/TextView;]
+      [43] iload_1 v1
+      [44] ifeq +8 (target=52)
+      [47] ldc #43
+        - String [正在抢红包......]
+      [49] goto +5 (target=54)
+      [52] ldc #42
+        - String [服务未启动]
+      [54] invokevirtual #114
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [57] aload_0 v0
+      [58] getfield #78
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.k Landroid/widget/TextView;]
+      [61] iload_1 v1
+      [62] ifeq +8 (target=70)
+      [65] ldc #1
+        - Integer [-16711936]
+      [67] goto +5 (target=72)
+      [70] ldc #2
+        - Integer [-7829368]
+      [72] invokevirtual #115
+        - Methodref [android/widget/TextView.setTextColor (I)V]
+      [75] iload_1 v1
+      [76] ifeq +15 (target=91)
+      [79] aload_0 v0
+      [80] getfield #85
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.r Landroid/widget/Button;]
+      [83] ldc #39
+        - String [停止服务]
+      [85] invokevirtual #105
+        - Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+      [88] goto +12 (target=100)
+      [91] aload_0 v0
+      [92] getfield #85
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.r Landroid/widget/Button;]
+      [95] ldc #41
+        - String [开启服务]
+      [97] invokevirtual #105
+        - Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+      [100] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 6):
+        - [52] Var: [a:com/wei/grabmoney/ui/MainActivity][i], Stack: [a:android/widget/TextView]
+        - [54] Var: [a:com/wei/grabmoney/ui/MainActivity][i], Stack: [a:android/widget/TextView][a:java/lang/String]
+        - [70] Var: ..., Stack: [a:android/widget/TextView]
+        - [72] Var: [a:com/wei/grabmoney/ui/MainActivity][i], Stack: [a:android/widget/TextView][i]
+        - [91] Var: -1, Stack: (empty)
+        - [100] Var: -1, Stack: (empty)
+  - Method:       b(Ljava/lang/String;)Z
+    Access flags: 0x2
+      = private boolean b(java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 88, locals = 6, stack = 3):
+      [0] iconst_0
+      [1] istore_2 v2
+      [2] aload_0 v0
+      [3] invokevirtual #132
+        - Methodref [com/wei/grabmoney/ui/MainActivity.getApplicationContext ()Landroid/content/Context;]
+      [6] invokevirtual #93
+        - Methodref [android/content/Context.getContentResolver ()Landroid/content/ContentResolver;]
+      [9] ldc #28
+        - String [accessibility_enabled]
+      [11] invokestatic #96
+        - Methodref [android/provider/Settings$Secure.getInt (Landroid/content/ContentResolver;Ljava/lang/String;)I]
+      [14] istore_2 v2
+      [15] goto +4 (target=19)
+      [18] astore_3 v3
+      [19] new #53
+        - Class [android/text/TextUtils$SimpleStringSplitter]
+      [22] dup
+      [23] bipush 58
+      [25] invokespecial #99
+        - Methodref [android/text/TextUtils$SimpleStringSplitter.<init> (C)V]
+      [28] astore_3 v3
+      [29] iload_2 v2
+      [30] iconst_1
+      [31] ificmpne +55 (target=86)
+      [34] aload_0 v0
+      [35] invokevirtual #132
+        - Methodref [com/wei/grabmoney/ui/MainActivity.getApplicationContext ()Landroid/content/Context;]
+      [38] invokevirtual #93
+        - Methodref [android/content/Context.getContentResolver ()Landroid/content/ContentResolver;]
+      [41] ldc #32
+        - String [enabled_accessibility_services]
+      [43] invokestatic #97
+        - Methodref [android/provider/Settings$Secure.getString (Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;]
+      [46] astore v4
+      [48] aload v4
+      [50] ifnull +36 (target=86)
+      [53] aload_3 v3
+      [54] aload v4
+      [56] invokevirtual #102
+        - Methodref [android/text/TextUtils$SimpleStringSplitter.setString (Ljava/lang/String;)V]
+      [59] aload_3 v3
+      [60] invokevirtual #100
+        - Methodref [android/text/TextUtils$SimpleStringSplitter.hasNext ()Z]
+      [63] ifeq +23 (target=86)
+      [66] aload_3 v3
+      [67] invokevirtual #101
+        - Methodref [android/text/TextUtils$SimpleStringSplitter.next ()Ljava/lang/String;]
+      [70] astore v5
+      [72] aload v5
+      [74] aload_1 v1
+      [75] invokevirtual #145
+        - Methodref [java/lang/String.equalsIgnoreCase (Ljava/lang/String;)Z]
+      [78] ifeq +5 (target=83)
+      [81] iconst_1
+      [82] ireturn
+      [83] goto -24 (target=59)
+      [86] iconst_0
+      [87] ireturn
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (2 -> 15: 18):
+      - Class [android/provider/Settings$SettingNotFoundException]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 5):
+        - [18] Var: [a:com/wei/grabmoney/ui/MainActivity][a:java/lang/String][i], Stack: [a:android/provider/Settings$SettingNotFoundException]
+        - [19] Var: ..., Stack: (empty)
+        - [59] Var: [T][a:java/lang/String][T][a:android/text/TextUtils$SimpleStringSplitter], Stack: 
+        - [83] Var: ..., Stack: (empty)
+        - [86] Var: , Stack: 
+  - Method:       startService(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void startService(android.view.View)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 23, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #81
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.n Landroid/content/Intent;]
+      [4] ldc #3
+        - Integer [268435456]
+      [6] invokevirtual #95
+        - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
+      [9] pop
+      [10] aload_0 v0
+      [11] aload_0 v0
+      [12] getfield #81
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.n Landroid/content/Intent;]
+      [15] invokevirtual #136
+        - Methodref [com/wei/grabmoney/ui/MainActivity.startActivity (Landroid/content/Intent;)V]
+      [18] goto +4 (target=22)
+      [21] astore_2 v2
+      [22] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (0 -> 18: 21):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 2):
+        - [21] Var: , Stack: [a:java/lang/Exception]
+        - [22] Var: ..., Stack: (empty)
+  - Method:       stopService(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void stopService(android.view.View)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 14, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_0 v0
+      [2] getfield #81
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.n Landroid/content/Intent;]
+      [5] invokevirtual #137
+        - Methodref [com/wei/grabmoney/ui/MainActivity.stopService (Landroid/content/Intent;)Z]
+      [8] pop
+      [9] aload_0 v0
+      [10] invokespecial #128
+        - Methodref [com/wei/grabmoney/ui/MainActivity.c ()V]
+      [13] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreateOptionsMenu(Landroid/view/Menu;)Z
+    Access flags: 0x1
+      = public boolean onCreateOptionsMenu(android.view.Menu)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #133
+        - Methodref [com/wei/grabmoney/ui/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+      [4] ldc #17
+        - Integer [2131099648]
+      [6] aload_1 v1
+      [7] invokevirtual #103
+        - Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+      [10] iconst_1
+      [11] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    Access flags: 0x1
+      = public boolean onOptionsItemSelected(android.view.MenuItem)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 21, locals = 3, stack = 2):
+      [0] aload_1 v1
+      [1] invokeinterface #151, 256
+        - InterfaceMethodref [android/view/MenuItem.getItemId ()I]
+      [6] istore_2 v2
+      [7] iload_2 v2
+      [8] ldc #4
+        - Integer [2130968576]
+      [10] ificmpne +5 (target=15)
+      [13] iconst_1
+      [14] ireturn
+      [15] aload_0 v0
+      [16] aload_1 v1
+      [17] invokespecial #141
+        - Methodref [com/wei/grabmoney/ui/a.onOptionsItemSelected (Landroid/view/MenuItem;)Z]
+      [20] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 1):
+        - [15] Var: ..., Stack: (empty)
+  - Method:       beforeTextChanged(Ljava/lang/CharSequence;III)V
+    Access flags: 0x1
+      = public void beforeTextChanged(java.lang.CharSequence,int,int,int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 1, locals = 5, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onTextChanged(Ljava/lang/CharSequence;III)V
+    Access flags: 0x1
+      = public void onTextChanged(java.lang.CharSequence,int,int,int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 1, locals = 5, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       afterTextChanged(Landroid/text/Editable;)V
+    Access flags: 0x1
+      = public void afterTextChanged(android.text.Editable)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 38, locals = 3, stack = 2):
+      [0] aload_1 v1
+      [1] invokestatic #98
+        - Methodref [android/text/TextUtils.isEmpty (Ljava/lang/CharSequence;)Z]
+      [4] ifne +27 (target=31)
+      [7] aload_1 v1
+      [8] invokevirtual #143
+        - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [11] astore_2 v2
+      [12] aload_0 v0
+      [13] getfield #80
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.m Landroid/widget/EditText;]
+      [16] aload_2 v2
+      [17] invokevirtual #146
+        - Methodref [java/lang/String.length ()I]
+      [20] invokevirtual #108
+        - Methodref [android/widget/EditText.setSelection (I)V]
+      [23] aload_0 v0
+      [24] aload_2 v2
+      [25] invokespecial #129
+        - Methodref [com/wei/grabmoney/ui/MainActivity.c (Ljava/lang/String;)V]
+      [28] goto +9 (target=37)
+      [31] aload_0 v0
+      [32] ldc #21
+        - String []
+      [34] invokespecial #129
+        - Methodref [com/wei/grabmoney/ui/MainActivity.c (Ljava/lang/String;)V]
+      [37] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 2):
+        - [31] Var: -1, Stack: (empty)
+        - [37] Var: -1, Stack: (empty)
+  - Method:       c(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void c(java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 11, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [4] ldc #34
+        - String [mark_work]
+      [6] aload_1 v1
+      [7] invokevirtual #120
+        - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    Access flags: 0x1
+      = public void onProgressChanged(android.widget.SeekBar,int,boolean)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 4, stack = 2):
+      [0] iload_3 v3
+      [1] ifeq +8 (target=9)
+      [4] aload_0 v0
+      [5] iload_2 v2
+      [6] putfield #92
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.y I]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 1):
+        - [9] Var: , Stack: 
+  - Method:       onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    Access flags: 0x1
+      = public void onStartTrackingTouch(android.widget.SeekBar)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 8, locals = 2, stack = 2):
+      [0] ldc #27
+        - String [MainActivity]
+      [2] ldc #23
+        - String [--- onStartTrackingTouch ---]
+      [4] invokestatic #117
+        - Methodref [com/wei/grabmoney/a/a.b (Ljava/lang/String;Ljava/lang/String;)V]
+      [7] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    Access flags: 0x1
+      = public void onStopTrackingTouch(android.widget.SeekBar)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 88, locals = 3, stack = 4):
+      [0] ldc #27
+        - String [MainActivity]
+      [2] ldc #24
+        - String [--- onStopTrackingTouch ---]
+      [4] invokestatic #117
+        - Methodref [com/wei/grabmoney/a/a.b (Ljava/lang/String;Ljava/lang/String;)V]
+      [7] aload_0 v0
+      [8] getfield #92
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.y I]
+      [11] i2f
+      [12] ldc #20
+        - Float [2000.0]
+      [14] fmul
+      [15] ldc #18
+        - Float [100.0]
+      [17] fdiv
+      [18] fstore_2 v2
+      [19] ldc #27
+        - String [MainActivity]
+      [21] new #73
+        - Class [java/lang/StringBuilder]
+      [24] dup
+      [25] invokespecial #147
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [28] ldc #40
+        - String [延迟了：]
+      [30] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [33] fload_2 v2
+      [34] invokevirtual #148
+        - Methodref [java/lang/StringBuilder.append (F)Ljava/lang/StringBuilder;]
+      [37] ldc #44
+        - String [毫秒]
+      [39] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [42] invokevirtual #150
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [45] invokestatic #116
+        - Methodref [com/wei/grabmoney/a/a.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [48] aload_0 v0
+      [49] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [52] ldc #31
+        - String [delay_time]
+      [54] fload_2 v2
+      [55] invokevirtual #119
+        - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;F)V]
+      [58] aload_0 v0
+      [59] getfield #79
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.l Landroid/widget/TextView;]
+      [62] new #73
+        - Class [java/lang/StringBuilder]
+      [65] dup
+      [66] invokespecial #147
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [69] fload_2 v2
+      [70] ldc #19
+        - Float [1000.0]
+      [72] fdiv
+      [73] invokevirtual #148
+        - Methodref [java/lang/StringBuilder.append (F)Ljava/lang/StringBuilder;]
+      [76] ldc #22
+        - String [ 秒 ]
+      [78] invokevirtual #149
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [81] invokevirtual #150
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [84] invokevirtual #114
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [87] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    Access flags: 0x1
+      = public void onCheckedChanged(android.widget.CompoundButton,boolean)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 179, locals = 3, stack = 3):
+      [0] aload_1 v1
+      [1] invokevirtual #106
+        - Methodref [android/widget/CompoundButton.getId ()I]
+      [4] tableswitch (18 offsets, default=174) (target=178)
+        2130968579: offset = 88, target = 92
+        2130968580: offset = 105, target = 109
+        2130968581: offset = 174, target = 178
+        2130968582: offset = 174, target = 178
+        2130968583: offset = 174, target = 178
+        2130968584: offset = 174, target = 178
+        2130968585: offset = 174, target = 178
+        2130968586: offset = 161, target = 165
+        2130968587: offset = 148, target = 152
+        2130968588: offset = 135, target = 139
+        2130968589: offset = 174, target = 178
+        2130968590: offset = 174, target = 178
+        2130968591: offset = 174, target = 178
+        2130968592: offset = 174, target = 178
+        2130968593: offset = 174, target = 178
+        2130968594: offset = 174, target = 178
+        2130968595: offset = 174, target = 178
+        2130968596: offset = 122, target = 126
+        default: offset = 174, target = 178
+      [92] iload_2 v2
+      [93] ifeq +85 (target=178)
+      [96] aload_0 v0
+      [97] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [100] ldc #33
+        - String [fastest_checked]
+      [102] iconst_1
+      [103] invokevirtual #121
+        - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;Z)V]
+      [106] goto +72 (target=178)
+      [109] iload_2 v2
+      [110] ifeq +68 (target=178)
+      [113] aload_0 v0
+      [114] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [117] ldc #33
+        - String [fastest_checked]
+      [119] iconst_0
+      [120] invokevirtual #121
+        - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;Z)V]
+      [123] goto +55 (target=178)
+      [126] iload_2 v2
+      [127] ifeq +51 (target=178)
+      [130] aload_0 v0
+      [131] ldc #38
+        - String [voice_vibrate]
+      [133] invokespecial #130
+        - Methodref [com/wei/grabmoney/ui/MainActivity.d (Ljava/lang/String;)V]
+      [136] goto +42 (target=178)
+      [139] iload_2 v2
+      [140] ifeq +38 (target=178)
+      [143] aload_0 v0
+      [144] ldc #37
+        - String [voice]
+      [146] invokespecial #130
+        - Methodref [com/wei/grabmoney/ui/MainActivity.d (Ljava/lang/String;)V]
+      [149] goto +29 (target=178)
+      [152] iload_2 v2
+      [153] ifeq +25 (target=178)
+      [156] aload_0 v0
+      [157] ldc #36
+        - String [vibrate]
+      [159] invokespecial #130
+        - Methodref [com/wei/grabmoney/ui/MainActivity.d (Ljava/lang/String;)V]
+      [162] goto +16 (target=178)
+      [165] iload_2 v2
+      [166] ifeq +12 (target=178)
+      [169] aload_0 v0
+      [170] ldc #35
+        - String [nothing]
+      [172] invokespecial #130
+        - Methodref [com/wei/grabmoney/ui/MainActivity.d (Ljava/lang/String;)V]
+      [175] goto +3 (target=178)
+      [178] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 7):
+        - [92] Var: [a:com/wei/grabmoney/ui/MainActivity][T][i], Stack: 
+        - [109] Var: ..., Stack: (empty)
+        - [126] Var: ..., Stack: (empty)
+        - [139] Var: ..., Stack: (empty)
+        - [152] Var: ..., Stack: (empty)
+        - [165] Var: ..., Stack: (empty)
+        - [178] Var: -3, Stack: (empty)
+  - Method:       d(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void d(java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 11, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #82
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.o Lcom/wei/grabmoney/a/b;]
+      [4] ldc #29
+        - String [alarm]
+      [6] aload_1 v1
+      [7] invokevirtual #120
+        - Methodref [com/wei/grabmoney/a/b.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onDestroy()V
+    Access flags: 0x4
+      = protected void onDestroy()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #140
+        - Methodref [com/wei/grabmoney/ui/a.onDestroy ()V]
+      [4] aconst_null
+      [5] putstatic #76
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 0, stack = 1):
+      [0] aconst_null
+      [1] putstatic #76
+        - Fieldref [com/wei/grabmoney/ui/MainActivity.i Lcom/wei/grabmoney/ui/MainActivity;]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  - Inner classes attribute (count = 5)
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      - Class [android/text/TextUtils$SimpleStringSplitter]
+      - Class [android/text/TextUtils]
+      - Utf8 [SimpleStringSplitter]
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      - Class [android/provider/Settings$Secure]
+      - Class [android/provider/Settings]
+      - Utf8 [Secure]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      - Class [android/provider/Settings$SettingNotFoundException]
+      - Class [android/provider/Settings]
+      - Utf8 [SettingNotFoundException]
+    - InnerClassesInfo:
+      Access flags:  0x609 = public static interface 
+      - Class [android/widget/SeekBar$OnSeekBarChangeListener]
+      - Class [android/widget/SeekBar]
+      - Utf8 [OnSeekBarChangeListener]
+    - InnerClassesInfo:
+      Access flags:  0x609 = public static interface 
+      - Class [android/widget/CompoundButton$OnCheckedChangeListener]
+      - Class [android/widget/CompoundButton]
+      - Utf8 [OnCheckedChangeListener]
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/a/a
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x21
+    = public class com.wei.grabmoney.a.a extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 18):
+  - Class [android/util/Log]
+  - Class [com/wei/grabmoney/a/a]
+  - Class [java/lang/Object]
+  - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  - NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
+  - NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  - Utf8 [Code]
+  - Utf8 [a]
+  - Utf8 [android/util/Log]
+  - Utf8 [b]
+  - Utf8 [com/wei/grabmoney/a/a]
+  - Utf8 [d]
+  - Utf8 [e]
+  - Utf8 [java/lang/Object]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       a(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x9
+      = public static void a(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 7, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokestatic #5
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [5] pop
+      [6] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       b(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x9
+      = public static void b(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 7, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokestatic #4
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [5] pop
+      [6] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/wei/grabmoney/a/b
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x21
+    = public class com.wei.grabmoney.a.b extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 69):
+  - String [mark]
+  - Class [android/content/Context]
+  - Class [android/content/SharedPreferences]
+  - Class [android/content/SharedPreferences$Editor]
+  - Class [com/wei/grabmoney/a/b]
+  - Class [java/lang/Object]
+  - Fieldref [com/wei/grabmoney/a/b.a Landroid/content/SharedPreferences;]
+  - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+  - Fieldref [com/wei/grabmoney/a/b.c Ljava/lang/String;]
+  - Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+  - InterfaceMethodref [android/content/SharedPreferences.getFloat (Ljava/lang/String;F)F]
+  - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+  - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - InterfaceMethodref [android/content/SharedPreferences$Editor.putFloat (Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+  - InterfaceMethodref [android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [<init> ()V]
+  - NameAndType [a Landroid/content/SharedPreferences;]
+  - NameAndType [b Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [c Ljava/lang/String;]
+  - NameAndType [commit ()Z]
+  - NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [getFloat (Ljava/lang/String;F)F]
+  - NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - NameAndType [getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [putFloat (Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [()Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Ljava/lang/String;F)F]
+  - Utf8 [(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [(Ljava/lang/String;F)V]
+  - Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [(Ljava/lang/String;Z)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [ConstantValue]
+  - Utf8 [Editor]
+  - Utf8 [InnerClasses]
+  - Utf8 [Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [Landroid/content/SharedPreferences;]
+  - Utf8 [Ljava/lang/String;]
+  - Utf8 [a]
+  - Utf8 [android/content/Context]
+  - Utf8 [android/content/SharedPreferences]
+  - Utf8 [android/content/SharedPreferences$Editor]
+  - Utf8 [b]
+  - Utf8 [c]
+  - Utf8 [com/wei/grabmoney/a/b]
+  - Utf8 [commit]
+  - Utf8 [edit]
+  - Utf8 [getFloat]
+  - Utf8 [getSharedPreferences]
+  - Utf8 [getString]
+  - Utf8 [java/lang/Object]
+  - Utf8 [mark]
+  - Utf8 [putBoolean]
+  - Utf8 [putFloat]
+  - Utf8 [putString]
+
+Fields (count = 3):
+  - Field:        c Ljava/lang/String;
+    Access flags: 0x12
+      = private final java.lang.String c
+    Class member attributes (count = 1):
+    - Constant value attribute:
+    - String [mark]
+  - Field:        a Landroid/content/SharedPreferences;
+    Access flags: 0x0
+      = android.content.SharedPreferences a
+  - Field:        b Landroid/content/SharedPreferences$Editor;
+    Access flags: 0x0
+      = android.content.SharedPreferences$Editor b
+
+Methods (count = 6):
+  - Method:       <init>(Landroid/content/Context;)V
+    Access flags: 0x1
+      = public b(android.content.Context)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 45, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #11
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] aload_0 v0
+      [5] ldc #1
+        - String [mark]
+      [7] putfield #9
+        - Fieldref [com/wei/grabmoney/a/b.c Ljava/lang/String;]
+      [10] aload_0 v0
+      [11] aconst_null
+      [12] putfield #7
+        - Fieldref [com/wei/grabmoney/a/b.a Landroid/content/SharedPreferences;]
+      [15] aload_0 v0
+      [16] aconst_null
+      [17] putfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [20] aload_0 v0
+      [21] aload_1 v1
+      [22] ldc #1
+        - String [mark]
+      [24] iconst_0
+      [25] invokevirtual #10
+        - Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [28] putfield #7
+        - Fieldref [com/wei/grabmoney/a/b.a Landroid/content/SharedPreferences;]
+      [31] aload_0 v0
+      [32] aload_0 v0
+      [33] getfield #7
+        - Fieldref [com/wei/grabmoney/a/b.a Landroid/content/SharedPreferences;]
+      [36] invokeinterface #12, 256
+        - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [41] putfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [44] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x1
+      = public void a(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 23, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [4] aload_1 v1
+      [5] aload_2 v2
+      [6] invokeinterface #18, 768
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
+      [11] pop
+      [12] aload_0 v0
+      [13] getfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [16] invokeinterface #15, 256
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [21] pop
+      [22] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    Access flags: 0x1
+      = public java.lang.String b(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 14, locals = 4, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #7
+        - Fieldref [com/wei/grabmoney/a/b.a Landroid/content/SharedPreferences;]
+      [4] aload_1 v1
+      [5] aload_2 v2
+      [6] invokeinterface #14, 768
+        - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [11] astore_3 v3
+      [12] aload_3 v3
+      [13] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Ljava/lang/String;F)V
+    Access flags: 0x1
+      = public void a(java.lang.String,float)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 23, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [4] aload_1 v1
+      [5] fload_2 v2
+      [6] invokeinterface #17, 768
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.putFloat (Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;]
+      [11] pop
+      [12] aload_0 v0
+      [13] getfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [16] invokeinterface #15, 256
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [21] pop
+      [22] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       b(Ljava/lang/String;F)F
+    Access flags: 0x1
+      = public float b(java.lang.String,float)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #7
+        - Fieldref [com/wei/grabmoney/a/b.a Landroid/content/SharedPreferences;]
+      [4] aload_1 v1
+      [5] fload_2 v2
+      [6] invokeinterface #13, 768
+        - InterfaceMethodref [android/content/SharedPreferences.getFloat (Ljava/lang/String;F)F]
+      [11] freturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Ljava/lang/String;Z)V
+    Access flags: 0x1
+      = public void a(java.lang.String,boolean)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 23, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [4] aload_1 v1
+      [5] iload_2 v2
+      [6] invokeinterface #16, 768
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+      [11] pop
+      [12] aload_0 v0
+      [13] getfield #8
+        - Fieldref [com/wei/grabmoney/a/b.b Landroid/content/SharedPreferences$Editor;]
+      [16] invokeinterface #15, 256
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [21] pop
+      [22] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  - Inner classes attribute (count = 1)
+    - InnerClassesInfo:
+      Access flags:  0x609 = public static interface 
+      - Class [android/content/SharedPreferences$Editor]
+      - Class [android/content/SharedPreferences]
+      - Utf8 [Editor]
+

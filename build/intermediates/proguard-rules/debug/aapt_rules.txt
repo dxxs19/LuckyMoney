@@ -1,0 +1,63 @@
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:51
+-keep class com.wei.grabmoney.service.GrabMoneyService { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:69
+-keep class com.wei.grabmoney.ui.AboutActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:63
+-keep class com.wei.grabmoney.ui.BaseActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:88
+-keep class com.wei.grabmoney.ui.BeCareActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:74
+-keep class com.wei.grabmoney.ui.InstructionsActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:38
+-keep class com.wei.grabmoney.ui.MainActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:84
+-keep class com.wei.grabmoney.ui.RewardActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:79
+-keep class com.wei.grabmoney.ui.SettingActivity { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:94
+-keep class net.youmi.android.AdBrowser { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:109
+-keep class net.youmi.android.AdReceiver { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:100
+-keep class net.youmi.android.AdService { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\build\intermediates\manifests\full\debug\AndroidManifest.xml:104
+-keep class net.youmi.android.ExpService { <init>(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** myApps(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** openAbout(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** openInstructions(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_be_care.xml:0
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** openSetting(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_main.xml:0
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_reward.xml:0
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** reward(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** showMyApps(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_setting.xml:0
+-keepclassmembers class * { *** showOffers(...); }
+
+# Referenced at D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\res\layout\activity_main.xml:0
+-keepclassmembers class * { *** startService(...); }
+
