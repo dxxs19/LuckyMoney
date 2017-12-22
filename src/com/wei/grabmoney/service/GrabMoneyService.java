@@ -22,6 +22,7 @@ import com.wei.grabmoney.ui.MainActivity;
 import com.wei.grabmoney.utils.Log;
 import com.wei.grabmoney.utils.SharedPreUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -82,7 +83,7 @@ public class GrabMoneyService extends AccessibilityService {
     private final String[] CLASSARRAYS = new String[]{WEIXIN_CLASSNAME, WEIXIN_LUCKYMONEYRECEIVEUI, WEIXIN_LUCKYMONEYDETAILUI,
             QQ_WALLET, QQ_CHAT};
     private final List<String> CLASSLISTS = Arrays.asList(CLASSARRAYS);
-    private final Handler mHandler = new Handler();
+    private boolean hasOpenBtn = false;
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
@@ -90,7 +91,6 @@ public class GrabMoneyService extends AccessibilityService {
         Log.e(TAG, "eventType = " + eventType);
         final String tempClass = event.getClassName().toString();
         Log.e(TAG, "tempClass : " + tempClass);
-//        openOrClose();
         switch (eventType) {
             // 监听通知栏消息,如果有“【微信红包】”4个字，则跳转到微信聊天界面，开始抢红包
             case AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED:
@@ -116,27 +116,34 @@ public class GrabMoneyService extends AccessibilityService {
                 }
                 else if (className.equals(WEIXIN_LUCKYMONEYRECEIVEUI))
                 {
-                    AccessibilityNodeInfo info = getOpenButtons();
-                    if (info == null)
+                    List<AccessibilityNodeInfo> infos = getOpenButtons();
+                    if (infos == null)
                     {   // 没有"开"
-                        if (getFailtInfos() == null)
-                        {  
+//                        if (getFailtInfos() == null)
+//                        {
                             Intent intent = new Intent(this, EmptyActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
-                        }
-                        else
-                        {
-                            // 已领完
-                            performGlobalAction(GLOBAL_ACTION_BACK);
-                        }
+//                        }
+//                        else
+//                        {
+//                            // 已领完
+//                            performGlobalAction(GLOBAL_ACTION_BACK);
+//                        }
                     }
-                    else
+                    else if (infos.size() > 0)
                     {   // 点击 "开"
-                        info.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                        hasOpenBtn = true;
+                        for (AccessibilityNodeInfo nodeInfo:infos) {
+                            nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                        }
                     }
                 } else if (className.equals(WEIXIN_LUCKYMONEYDETAILUI)) {
-                    performGlobalAction(GLOBAL_ACTION_BACK);
+                    if (hasOpenBtn)
+                    {// 自动点开的，要自动关掉
+                        performGlobalAction(GLOBAL_ACTION_BACK);
+                        hasOpenBtn = false;
+                    }
                 }
                 // 以下是抢QQ红包
                 else if (className.equals(QQ_CHAT)) {
@@ -153,11 +160,18 @@ public class GrabMoneyService extends AccessibilityService {
     private List<AccessibilityNodeInfo> getFailtInfos()
     {
         AccessibilityNodeInfo root = getRootInActiveWindow();
-        // 手慢了
-        List<AccessibilityNodeInfo> slowInfos = root.findAccessibilityNodeInfosByText(FAILT_TEXT);
-        // 已超时
-        List<AccessibilityNodeInfo> timeOutInfos = root.findAccessibilityNodeInfosByText(TIMEOUT_TEXT);
-        return (null != slowInfos && slowInfos.size() > 0) ? slowInfos : timeOutInfos;
+        if (root != null)
+        {
+            List<AccessibilityNodeInfo> failtInfos = new ArrayList<>();
+            // 手慢了
+            failtInfos = root.findAccessibilityNodeInfosByText(FAILT_TEXT);
+            if (null == failtInfos)
+            {
+                failtInfos = root.findAccessibilityNodeInfosByText(TIMEOUT_TEXT);
+            }
+            return failtInfos;
+        }
+        return null;
     }
 
     /**
@@ -198,7 +212,7 @@ public class GrabMoneyService extends AccessibilityService {
      *
      * @return
      */
-    private AccessibilityNodeInfo getOpenButtons() 
+    private List<AccessibilityNodeInfo> getOpenButtons()
     {
         AccessibilityNodeInfo nodeInfo = getRootInActiveWindow();
         if (nodeInfo == null)
@@ -207,7 +221,7 @@ public class GrabMoneyService extends AccessibilityService {
         }
         List<AccessibilityNodeInfo> nodes = nodeInfo.findAccessibilityNodeInfosByViewId(OPENBTN_ID);
         if (nodes.size() > 0) {
-            return nodes.get(0);
+            return nodes;
         }
         return null;
     }
@@ -366,7 +380,7 @@ public class GrabMoneyService extends AccessibilityService {
      */
     private void openMoney() {
         // 点击繁体的“开”。现在新版本微信红包是点“开”来领取
-        AccessibilityNodeInfo info = getOpenButtons();
+        List<AccessibilityNodeInfo> info = getOpenButtons();
         if (null == info) {
             // 如果没有“开”可点，则直接关闭当前窗口，回到微信聊天界面
             if (!className.equals(WEIXIN_CLASSNAME) && !className.equals(WEIXIN_LUCKYMONEYDETAILUI)) {

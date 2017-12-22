@@ -11,7 +11,7 @@ public class EmptyActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empty);
-        Log.e(TAG, "--- onCreate ---");
+        Log.e(TAG, "--- onCreate ---" + MainActivity.mMainActivity);
         finish();
         if (MainActivity.mMainActivity != null)
         {
