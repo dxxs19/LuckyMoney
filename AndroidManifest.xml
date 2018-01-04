@@ -35,7 +35,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.EmptyActivity"/>
+        <activity android:name=".ui.EmptyActivity"
+            android:launchMode="singleTop"/>
         <service
             android:name=".service.GrabMoneyService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">

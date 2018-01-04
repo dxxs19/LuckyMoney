@@ -104,18 +104,22 @@ public class GrabMoneyService extends AccessibilityService {
                 // 以下是抢微信红包
                 if (className.equals(WEIXIN_CLASSNAME)) {
                     // 如果是聊天界面，则搜索有没有红包，有则点击红包
-                    Log.e(TAG, "--- 开始点红包 ---");
                     getMoney();
                 }
                 else if (className.equals(WEIXIN_LUCKYMONEYRECEIVEUI) || className.equals(WEIXIN_LUCKYMONEYRECEIVEUI_OLD))
                 {
                     List<AccessibilityNodeInfo> infos = getOpenButtons();
+                    Log.e(TAG, "has Open ? " + (infos != null) + ", size : " + (infos != null ? infos.size() : 0));
                     if (infos == null)
                     {   // 没有"开",android 7.0+需要这个策略
-                        if (Build.VERSION.SDK_INT > 23) {
-                            Intent intent = new Intent(this, EmptyActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                        if (EmptyActivity.isFirstStart)
+                        {  /// TODO
+                            if (Build.VERSION.SDK_INT > 23)
+                            {
+                                Intent intent = new Intent(this, EmptyActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
                         }
                     }
                     else if (infos.size() > 0)
@@ -142,23 +146,6 @@ public class GrabMoneyService extends AccessibilityService {
 
             default:
         }
-    }
-
-    private List<AccessibilityNodeInfo> getFailtInfos()
-    {
-        AccessibilityNodeInfo root = getRootInActiveWindow();
-        if (root != null)
-        {
-            List<AccessibilityNodeInfo> failtInfos = new ArrayList<>();
-            // 手慢了
-            failtInfos = root.findAccessibilityNodeInfosByText(FAILT_TEXT);
-            if (null == failtInfos)
-            {
-                failtInfos = root.findAccessibilityNodeInfosByText(TIMEOUT_TEXT);
-            }
-            return failtInfos;
-        }
-        return null;
     }
 
     /**
