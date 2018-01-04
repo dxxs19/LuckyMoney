@@ -53,7 +53,7 @@ public class GrabMoneyService extends AccessibilityService {
     private static final String GETMONEY_TEXT = "领取红包";
     private static final String CHECKMONEY_TEXT = "查看红包";
     private static final String FAILT_TEXT = "手慢了";
-    private static final String TIMEOUT_TEXT = "该红包已超过";
+    private static final String TIMEOUT_TEXT = "该红包";
 
     // QQ钱包界面
     private static final String QQ_WALLET = "cooperation.qwallet.plugin.QWalletPluginProxyActivity";
@@ -98,6 +98,7 @@ public class GrabMoneyService extends AccessibilityService {
                 className = event.getClassName().toString();
             case AccessibilityEvent.TYPE_VIEW_SCROLLED:
             case AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED:
+                Log.e(TAG, className + "; " + tempClass);
                 if (!CLASSLISTS.contains(className)) {
                     break;
                 }
@@ -111,11 +112,20 @@ public class GrabMoneyService extends AccessibilityService {
                     List<AccessibilityNodeInfo> infos = getOpenButtons();
                     Log.e(TAG, "has Open ? " + (infos != null) + ", size : " + (infos != null ? infos.size() : 0));
                     if (infos == null)
-                    {   // 没有"开",android 7.0+需要这个策略
-                        if (EmptyActivity.isFirstStart)
-                        {  /// TODO
-                            if (Build.VERSION.SDK_INT > 23)
-                            {
+                    {   // 已经被别人抢了
+                        if (getFailtInfos() != null)
+                        {
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            performGlobalAction(GLOBAL_ACTION_BACK);
+                            hasOpenBtn = false;
+                        }
+                        else {
+                            // 没有"开",android 7.0+需要这个策略
+                            if (Build.VERSION.SDK_INT > 23) {
                                 Intent intent = new Intent(this, EmptyActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
@@ -146,6 +156,23 @@ public class GrabMoneyService extends AccessibilityService {
 
             default:
         }
+    }
+
+    private List<AccessibilityNodeInfo> getFailtInfos()
+    {
+        AccessibilityNodeInfo root = getRootInActiveWindow();
+        if (root != null)
+        {
+            List<AccessibilityNodeInfo> failtInfos;
+            // 手慢了
+            failtInfos = root.findAccessibilityNodeInfosByText(FAILT_TEXT);
+            if (null == failtInfos)
+            {
+                failtInfos = root.findAccessibilityNodeInfosByText(TIMEOUT_TEXT);
+            }
+            return failtInfos;
+        }
+        return null;
     }
 
     /**
@@ -222,9 +249,13 @@ public class GrabMoneyService extends AccessibilityService {
                 String mark = (sharedPreferences == null) ? "" : sharedPreferences.getString("mark_work", "");
                 for (AccessibilityNodeInfo nodeInfo:targetNodeList)
                 {
-                    if (isNodeCanOpen(nodeInfo, mark)) {
+                    if (isNodeCanOpen(nodeInfo, mark))
+                    {
                         Log.e(TAG, "luckMoneyInfo.isNodeCanOpen");
-                        clickWallet(nodeInfo);
+                        if (!isFastMultiClick(1000))
+                        {
+                            clickWallet(nodeInfo);
+                        }
                     }
                 }
             }
@@ -449,38 +480,20 @@ public class GrabMoneyService extends AccessibilityService {
         Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT).show();
     }
 
-    protected long lastClickTime, lastClickTime2, lastClickTime3;
-
+    protected long lastClickTime;
     /**
      * 判断控件在短时间内是否被连续点击了两次
-     *
      * @return
      */
-    public boolean isFastDoubleClick(int flag) {
-        long timeD = 0l;
-        long time = System.currentTimeMillis();
-
-        switch (flag) {
-            case 1:
-                timeD = time - lastClickTime;
-                lastClickTime = time;
-                break;
-
-            case 2:
-                timeD = time - lastClickTime2;
-                lastClickTime2 = time;
-                break;
-
-            case 3:
-                timeD = time - lastClickTime3;
-                lastClickTime3 = time;
-                break;
+    public boolean isFastMultiClick(int period) {
+        long currentTimeMillis = System.currentTimeMillis();
+        long tempTime = currentTimeMillis - lastClickTime;
+        if (tempTime > period)
+        {
+            lastClickTime = currentTimeMillis;
+            return false;
         }
-
-        if (0 < timeD && timeD < PERIOD_TIME) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     //
