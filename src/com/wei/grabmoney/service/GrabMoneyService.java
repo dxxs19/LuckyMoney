@@ -207,7 +207,7 @@ public class GrabMoneyService extends AccessibilityService {
             return null;
         }
         SharedPreferences sharedPreferences = getSharedPreferences("mark", MODE_PRIVATE);
-        String openId = (sharedPreferences == null) ? "" : sharedPreferences.getString("openId", "");
+        String openId = (sharedPreferences == null) ? "" : sharedPreferences.getString("openId", "c2i");
         OPENBTN_ID = openId.contains(WX_ID_PREFIX) ? openId : (WX_ID_PREFIX + openId);
         Log.e(TAG, "OPENBTN_ID : " + OPENBTN_ID);
         List<AccessibilityNodeInfo> nodes = nodeInfo.findAccessibilityNodeInfosByViewId(OPENBTN_ID);
