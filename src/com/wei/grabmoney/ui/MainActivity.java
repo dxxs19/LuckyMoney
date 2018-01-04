@@ -29,10 +29,10 @@ import com.wei.grabmoney.utils.SharedPreUtils;
 public class MainActivity extends BaseActivity implements TextWatcher, SeekBar.OnSeekBarChangeListener, CompoundButton.OnCheckedChangeListener {
     private final String TAG = "MainActivity";
     private TextView currentStateTxt, delayTimeTxt;
-    private EditText contentTxt;
+    private EditText contentTxt, mOpenIdEdtTxt;
     private final Intent mAccessibleIntent =
             new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-    public static final String MARK_WORK = "mark_work", DELAY_TIME = "delay_time", FASTEST_CHECKED = "fastest_checked";
+    public static final String MARK_WORK = "mark_work", OPENID = "openId", DELAY_TIME = "delay_time", FASTEST_CHECKED = "fastest_checked";
     private SharedPreUtils mSharedPreUtils;
     private SeekBar mSeekBar;
     private final float MAX_TIME = 2000;
@@ -60,6 +60,7 @@ public class MainActivity extends BaseActivity implements TextWatcher, SeekBar.O
         setCustomTitle("自动抢红包");
         currentStateTxt = (TextView) findViewById(R.id.txt_currentState);
         contentTxt = (EditText) findViewById(R.id.content);
+        mOpenIdEdtTxt = (EditText) findViewById(R.id.edtTxt_openId);
         mSeekBar = (SeekBar) findViewById(R.id.delay_seekBar);
         fastestChk = (RadioButton) findViewById(R.id.chk_fastest);
         manualChk = (RadioButton) findViewById(R.id.chk_manual);
@@ -85,6 +86,10 @@ public class MainActivity extends BaseActivity implements TextWatcher, SeekBar.O
         contentTxt.setText(mark);
         contentTxt.setSelection(mark.length());
         contentTxt.addTextChangedListener(this);
+
+        String openId = mSharedPreUtils.getString(OPENID, "");
+        mOpenIdEdtTxt.setText(openId);
+        mOpenIdEdtTxt.addTextChangedListener(this);
 
         float delayTime = mSharedPreUtils.getFloat(DELAY_TIME, 0);
         float rate = delayTime / MAX_TIME;
@@ -198,14 +203,33 @@ public class MainActivity extends BaseActivity implements TextWatcher, SeekBar.O
     }
 
     @Override
-    public void afterTextChanged(Editable s) {
-        if (!TextUtils.isEmpty(s)) {
-            String mark = s.toString();
-            contentTxt.setSelection(mark.length());
-            saveMark(mark);
-        } else {
-            saveMark("");
+    public void afterTextChanged(Editable s)
+    {
+        if (contentTxt.isFocused())
+        {
+            if (!TextUtils.isEmpty(s)) {
+                String mark = s.toString();
+                contentTxt.setSelection(mark.length());
+                saveMark(mark);
+            } else {
+                saveMark("");
+            }
         }
+        else if (mOpenIdEdtTxt.isFocused())
+        {
+            if (!TextUtils.isEmpty(s)) {
+                String openId = s.toString();
+                mOpenIdEdtTxt.setSelection(openId.length());
+                saveOpenId(openId);
+            } else {
+                saveOpenId("");
+            }
+        }
+    }
+
+    private void saveOpenId(String openId)
+    {
+        mSharedPreUtils.putString(OPENID, openId);
     }
 
     private void saveMark(String mark) {

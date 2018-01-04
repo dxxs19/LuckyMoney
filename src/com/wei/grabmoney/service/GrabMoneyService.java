@@ -40,15 +40,7 @@ public class GrabMoneyService extends AccessibilityService {
     /**
      * "开"按钮的id
      */
-    private static final String OPENBTN_ID = WX_ID_PREFIX + "bx4";
-    /**
-     * 打开红包界面的关闭界面按钮ID
-     */
-    private static final String RECEIVEUI_CLOSEBTN_ID = WX_ID_PREFIX + "bus";
-    /**
-     * 红包详情界面的关闭界面按钮ID
-     */
-    private static final String DETAILUI_CLOSEBTN_ID = WX_ID_PREFIX + "hi";
+    private static String OPENBTN_ID = ""; //WX_ID_PREFIX + "c2i";
 
     private static final int PERIOD_TIME = 3000;
     private static final String WEIXIN_CLASSNAME = "com.tencent.mm.ui.LauncherUI";
@@ -79,7 +71,6 @@ public class GrabMoneyService extends AccessibilityService {
 
     private SharedPreUtils mSharedPreUtils;
 
-    private AccessibilityNodeInfo rootNodeInfo;
     private final String[] CLASSARRAYS = new String[]{WEIXIN_CLASSNAME, WEIXIN_LUCKYMONEYRECEIVEUI, WEIXIN_LUCKYMONEYDETAILUI,
             QQ_WALLET, QQ_CHAT};
     private final List<String> CLASSLISTS = Arrays.asList(CLASSARRAYS);
@@ -219,6 +210,10 @@ public class GrabMoneyService extends AccessibilityService {
         {
             return null;
         }
+        SharedPreferences sharedPreferences = getSharedPreferences("mark", MODE_PRIVATE);
+        String openId = (sharedPreferences == null) ? "c2i" : sharedPreferences.getString("openId", "c2i");
+        OPENBTN_ID = openId.contains(WX_ID_PREFIX) ? openId : (WX_ID_PREFIX + openId);
+        Log.e(TAG, "OPENBTN_ID : " + OPENBTN_ID);
         List<AccessibilityNodeInfo> nodes = nodeInfo.findAccessibilityNodeInfosByViewId(OPENBTN_ID);
         if (nodes.size() > 0) {
             return nodes;
@@ -413,7 +408,6 @@ public class GrabMoneyService extends AccessibilityService {
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         mSharedPreUtils = new SharedPreUtils(this);
         initSoundPool();
-
         showMsg("服务已开启！！！");
 
 //        setServiceToForeground();

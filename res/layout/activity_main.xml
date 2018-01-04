@@ -112,6 +112,16 @@
                 android:background="@drawable/time_bg"
                 android:minHeight="40dp"
                 android:padding="5dp"/>
+
+            <EditText
+                android:id="@+id/edtTxt_openId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/time_bg"
+                android:minHeight="40dp"
+                android:hint="请输入openId"
+                android:padding="5dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -164,7 +174,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="极速抢(微信6.5.4)"
+                    android:text="极速抢(微信6.6.1)"
                     android:textColor="@color/wine_red"
                     android:textSize="18sp"/>
 

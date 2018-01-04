@@ -14,16 +14,6 @@ public class SharedPreUtils
     public static SharedPreUtils sSharedPreUtils;
     private static Context mContext;
 
-    public static SharedPreUtils getInstance(Context context)
-    {
-        if (sSharedPreUtils == null)
-        {
-            mContext = context;
-            sSharedPreUtils = new SharedPreUtils(context);
-        }
-        return sSharedPreUtils;
-    }
-
     public SharedPreUtils(Context context)
     {
         sharedPreferences = context.getSharedPreferences(PRE_NAME, Context.MODE_PRIVATE);
