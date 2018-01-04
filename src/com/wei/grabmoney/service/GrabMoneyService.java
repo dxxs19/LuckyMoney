@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.os.Vibrator;
@@ -44,6 +45,7 @@ public class GrabMoneyService extends AccessibilityService {
 
     private static final int PERIOD_TIME = 3000;
     private static final String WEIXIN_CLASSNAME = "com.tencent.mm.ui.LauncherUI";
+    private static final String WEIXIN_LUCKYMONEYRECEIVEUI_OLD = "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyReceiveUI";
     private static final String WEIXIN_LUCKYMONEYRECEIVEUI = "com.tencent.mm.plugin.luckymoney.ui.En_fba4b94f";
     private static final String WEIXIN_MONEY_TEXT = "[微信红包]";
     // 红包详情界面(已领该红包)
@@ -71,7 +73,7 @@ public class GrabMoneyService extends AccessibilityService {
 
     private SharedPreUtils mSharedPreUtils;
 
-    private final String[] CLASSARRAYS = new String[]{WEIXIN_CLASSNAME, WEIXIN_LUCKYMONEYRECEIVEUI, WEIXIN_LUCKYMONEYDETAILUI,
+    private final String[] CLASSARRAYS = new String[]{WEIXIN_CLASSNAME, WEIXIN_LUCKYMONEYRECEIVEUI_OLD, WEIXIN_LUCKYMONEYRECEIVEUI, WEIXIN_LUCKYMONEYDETAILUI,
             QQ_WALLET, QQ_CHAT};
     private final List<String> CLASSLISTS = Arrays.asList(CLASSARRAYS);
     private boolean hasOpenBtn = false;
@@ -105,22 +107,16 @@ public class GrabMoneyService extends AccessibilityService {
                     Log.e(TAG, "--- 开始点红包 ---");
                     getMoney();
                 }
-                else if (className.equals(WEIXIN_LUCKYMONEYRECEIVEUI))
+                else if (className.equals(WEIXIN_LUCKYMONEYRECEIVEUI) || className.equals(WEIXIN_LUCKYMONEYRECEIVEUI_OLD))
                 {
                     List<AccessibilityNodeInfo> infos = getOpenButtons();
                     if (infos == null)
-                    {   // 没有"开"
-//                        if (getFailtInfos() == null)
-//                        {
+                    {   // 没有"开",android 7.0+需要这个策略
+                        if (Build.VERSION.SDK_INT > 23) {
                             Intent intent = new Intent(this, EmptyActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
-//                        }
-//                        else
-//                        {
-//                            // 已领完
-//                            performGlobalAction(GLOBAL_ACTION_BACK);
-//                        }
+                        }
                     }
                     else if (infos.size() > 0)
                     {   // 点击 "开"
@@ -211,7 +207,7 @@ public class GrabMoneyService extends AccessibilityService {
             return null;
         }
         SharedPreferences sharedPreferences = getSharedPreferences("mark", MODE_PRIVATE);
-        String openId = (sharedPreferences == null) ? "c2i" : sharedPreferences.getString("openId", "c2i");
+        String openId = (sharedPreferences == null) ? "" : sharedPreferences.getString("openId", "");
         OPENBTN_ID = openId.contains(WX_ID_PREFIX) ? openId : (WX_ID_PREFIX + openId);
         Log.e(TAG, "OPENBTN_ID : " + OPENBTN_ID);
         List<AccessibilityNodeInfo> nodes = nodeInfo.findAccessibilityNodeInfosByViewId(OPENBTN_ID);
