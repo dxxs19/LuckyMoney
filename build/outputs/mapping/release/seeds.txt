@@ -146,6 +146,7 @@ com.wei.grabmoney.R$id: int chk_manual
 com.wei.grabmoney.R$id: int container
 com.wei.grabmoney.R$id: int content
 com.wei.grabmoney.R$id: int delay_seekBar
+com.wei.grabmoney.R$id: int edtTxt_openId
 com.wei.grabmoney.R$id: int ll_head
 com.wei.grabmoney.R$id: int ll_service
 com.wei.grabmoney.R$id: int rdoBtn_nothing

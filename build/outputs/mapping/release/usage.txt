@@ -1260,11 +1260,9 @@ com.wei.grabmoney.service.GrabMoneyService:
     private static final java.lang.String TAG
     private static final java.lang.String WX_PKG
     private static final java.lang.String WX_ID_PREFIX
-    private static final java.lang.String OPENBTN_ID
-    private static final java.lang.String RECEIVEUI_CLOSEBTN_ID
-    private static final java.lang.String DETAILUI_CLOSEBTN_ID
     private static final int PERIOD_TIME
     private static final java.lang.String WEIXIN_CLASSNAME
+    private static final java.lang.String WEIXIN_LUCKYMONEYRECEIVEUI_OLD
     private static final java.lang.String WEIXIN_LUCKYMONEYRECEIVEUI
     private static final java.lang.String WEIXIN_MONEY_TEXT
     private static final java.lang.String WEIXIN_LUCKYMONEYDETAILUI
@@ -1278,13 +1276,8 @@ com.wei.grabmoney.service.GrabMoneyService:
     private static final java.lang.String QQ_COMMAND
     private static final java.lang.String QQ_CLICK_COMMAND
     private static final java.lang.String QQ_MONEY_TEXT
-    private android.view.accessibility.AccessibilityNodeInfo rootNodeInfo
-    protected long lastClickTime
-    protected long lastClickTime2
-    protected long lastClickTime3
-    369:385:private void openMoney()
-    469:492:public boolean isFastDoubleClick(int)
-    497:507:private void setServiceToForeground()
+    394:410:private void openMoney()
+    503:513:private void setServiceToForeground()
 com.wei.grabmoney.ui.BaseActivity:
     70:72:public void hideTitle()
     75:77:public void setCustomTitle(int)
@@ -1294,6 +1287,7 @@ com.wei.grabmoney.ui.BaseActivity$2
 com.wei.grabmoney.ui.BaseActivity$3
 com.wei.grabmoney.ui.MainActivity:
     public static final java.lang.String MARK_WORK
+    public static final java.lang.String OPENID
     public static final java.lang.String DELAY_TIME
     public static final java.lang.String FASTEST_CHECKED
     public static final java.lang.String VOICE_VIBRATE
@@ -1308,8 +1302,7 @@ com.wei.grabmoney.utils.Log:
 com.wei.grabmoney.utils.SharedPreUtils:
     public static com.wei.grabmoney.utils.SharedPreUtils sSharedPreUtils
     private static android.content.Context mContext
-    19:24:public static com.wei.grabmoney.utils.SharedPreUtils getInstance(android.content.Context)
-    47:49:public void putInt(java.lang.String,int)
-    53:53:public int getInt(java.lang.String,int)
-    75:75:public boolean getBoolean(java.lang.String,boolean)
+    37:39:public void putInt(java.lang.String,int)
+    43:43:public int getInt(java.lang.String,int)
+    65:65:public boolean getBoolean(java.lang.String,boolean)
 com.wei.grabmoney.utils.TextOptUtils

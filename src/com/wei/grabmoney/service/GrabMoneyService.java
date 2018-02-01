@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.os.Vibrator;
+import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ import com.wei.grabmoney.ui.EmptyActivity;
 import com.wei.grabmoney.ui.MainActivity;
 import com.wei.grabmoney.utils.Log;
 import com.wei.grabmoney.utils.SharedPreUtils;
+import com.wei.grabmoney.utils.WindowUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -125,10 +127,13 @@ public class GrabMoneyService extends AccessibilityService {
                         }
                         else {
                             // 没有"开",android 7.0+需要这个策略
-                            if (Build.VERSION.SDK_INT > 23) {
-                                Intent intent = new Intent(this, EmptyActivity.class);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(intent);
+                            if (Build.VERSION.SDK_INT > 23 )
+                            {
+                                Log.e(TAG, "startActivity");
+//                                Intent intent = new Intent(this, EmptyActivity.class);
+//                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                                startActivity(intent);
+//                                WindowUtil.showPopupWindow(this);
                             }
                         }
                     }
@@ -137,6 +142,7 @@ public class GrabMoneyService extends AccessibilityService {
                         hasOpenBtn = true;
                         for (AccessibilityNodeInfo nodeInfo:infos) {
                             nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+
                         }
                     }
                 } else if (className.equals(WEIXIN_LUCKYMONEYDETAILUI)) {

@@ -53,19 +53,20 @@ public final class R {
     public static final int container=0x7f040005;
     public static final int content=0x7f040006;
     public static final int delay_seekBar=0x7f040007;
-    public static final int ll_head=0x7f040008;
-    public static final int ll_service=0x7f040009;
-    public static final int rdoBtn_nothing=0x7f04000a;
-    public static final int rdoBtn_vibrate=0x7f04000b;
-    public static final int rdoBtn_voice=0x7f04000c;
-    public static final int title=0x7f04000d;
-    public static final int title_back=0x7f04000e;
-    public static final int title_container=0x7f04000f;
-    public static final int title_custom=0x7f040010;
-    public static final int txt_currentState=0x7f040011;
-    public static final int txt_delayTime=0x7f040012;
-    public static final int txt_time=0x7f040013;
-    public static final int voice_vibrate=0x7f040014;
+    public static final int edtTxt_openId=0x7f040008;
+    public static final int ll_head=0x7f040009;
+    public static final int ll_service=0x7f04000a;
+    public static final int rdoBtn_nothing=0x7f04000b;
+    public static final int rdoBtn_vibrate=0x7f04000c;
+    public static final int rdoBtn_voice=0x7f04000d;
+    public static final int title=0x7f04000e;
+    public static final int title_back=0x7f04000f;
+    public static final int title_container=0x7f040010;
+    public static final int title_custom=0x7f040011;
+    public static final int txt_currentState=0x7f040012;
+    public static final int txt_delayTime=0x7f040013;
+    public static final int txt_time=0x7f040014;
+    public static final int voice_vibrate=0x7f040015;
   }
   public static final class layout {
     public static final int activity_empty=0x7f050000;

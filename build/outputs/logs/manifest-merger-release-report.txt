@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-52:12
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-53:12
 MERGED from [com.android.support:support-v4:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\492d8de8c2c53895447cc6e56a2a942b\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-fragment:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\eb2bff4b8cedaee7eb6fd60b2d32fb75\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-media-compat:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-media-compat-25.1.0.aar\fed8690ba51815dfc35f2627037979e6\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-core-utils:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-core-utils-25.1.0.aar\2efd208daa68721322f7137721c9f3dc\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-core-ui:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-core-ui-25.1.0.aar\cc42b0b5451b9f993b017b36aca94a6d\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:support-compat:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-compat-25.1.0.aar\5197085d9a24af292de8f3851ee645d8\AndroidManifest.xml:17:1-27:12
-INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:2:1-53:12
 	package
 		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:4:11-38
 	android:versionName
@@ -66,7 +66,7 @@ ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:15:5-
 	android:name
 		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:15:22-72
 application
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:21:5-50:19
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:21:5-51:19
 MERGED from [com.android.support:support-v4:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\492d8de8c2c53895447cc6e56a2a942b\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-v4-25.1.0.aar\492d8de8c2c53895447cc6e56a2a942b\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.1.0] D:\Android\android-studio\gradle\caches\transforms-1\files-1.1\support-fragment-25.1.0.aar\eb2bff4b8cedaee7eb6fd60b2d32fb75\AndroidManifest.xml:25:5-20
@@ -110,24 +110,26 @@ ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:35:17
 	android:name
 		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:35:27-74
 activity#com.wei.grabmoney.ui.EmptyActivity
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:38:9-53
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:38:9-39:45
+	android:launchMode
+		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:39:13-43
 	android:name
 		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:38:19-51
 service#com.wei.grabmoney.service.GrabMoneyService
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:39:9-49:19
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:40:9-50:19
 	android:permission
-		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:41:13-79
+		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:42:13-79
 	android:name
-		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:40:13-53
+		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:41:13-53
 intent-filter#android.accessibilityservice.AccessibilityService
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:42:13-44:29
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:43:13-45:29
 action#android.accessibilityservice.AccessibilityService
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:43:17-91
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:44:17-91
 	android:name
-		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:43:25-89
+		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:44:25-89
 meta-data#android.accessibilityservice
-ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:46:13-48:68
+ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:47:13-49:68
 	android:resource
-		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:48:17-66
+		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:49:17-66
 	android:name
-		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:47:17-60
+		ADDED from D:\WEI\Netearned\GrabMoneyV1.0.12\GrabMoney\AndroidManifest.xml:48:17-60

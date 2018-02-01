@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Dec 21 22:40:03 CST 2017
+#Tue Jan 09 20:38:00 CST 2018
 0.baseType=DIRECTORY
 0.base=D\:\\WEI\\Netearned\\GrabMoneyV1.0.12\\GrabMoney\\build\\intermediates\\transforms\\dex\\release\\0
 0.path=classes.dex

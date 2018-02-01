@@ -34,7 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wei.grabmoney.ui.EmptyActivity" />
+        <activity
+            android:name="com.wei.grabmoney.ui.EmptyActivity"
+            android:launchMode="singleTop" />
 
         <service
             android:name="com.wei.grabmoney.service.GrabMoneyService"
